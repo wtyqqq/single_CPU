@@ -1,0 +1,7 @@
+Running: xsim.dir/myALU_test_behav/xsimk.exe -simmode gui -wdb myALU_test_behav.wdb -simrunnum 0 -socket 10535
+Design successfully loaded
+Design Loading Memory Usage: 7704 KB (Peak: 7704 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 8252 KB (Peak: 8252 KB)
+Simulation CPU Usage: 15 ms
