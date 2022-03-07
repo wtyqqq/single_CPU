@@ -25,7 +25,7 @@ module myALU(
     in1,in2,op,out,cf,of,zf
     );
     input [31:0] in1,in2;
-    input [11:0] op;
+    input [10:0] op;
     output reg [31:0] out;
     output reg cf,of,zf;
     always@(in1 or in2 or op)begin
@@ -56,7 +56,7 @@ module myALU(
          //subu
          11'b00000100011:
          begin
-         {carryout,out}=in1-in2;
+         {cf,out}=in1-in2;
          zf=(out==0)?1:0;
          of=0;
          end 
@@ -118,20 +118,20 @@ module myALU(
          begin
          {cf,out} = in1<<in2;
          of=0;
-         zero=(out==0)?1:0;
+         zf=(out==0)?1:0;
          end
          //shr
          11'b00000000110:
          begin
-         out=in0>>in1;
-         cf = in0[in1-1];
+         out=in1>>in2;
+         cf = in1[in2-1];
          of = 0;
-         zero = (out==0)?1:0;
+         zf = (out==0)?1:0;
          end
          //sar
          11'b00000000111:
          begin
-         out = ($singed(in1))>>in1;
+         out = ($signed(in1))>>in2;
          cf = in1[in1 - 1];
          of = 0;
          zf = (out == 0)?1:0;
