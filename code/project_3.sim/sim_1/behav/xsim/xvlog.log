@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/documents/计算机组成原理/single_CPU/code/project_3.srcs/sources_1/new/myALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module myALU
+ERROR: [VRFC 10-2989] 'carryout' is not declared [D:/documents/计算机组成原理/single_CPU/code/project_3.srcs/sources_1/new/myALU.v:59]
+ERROR: [VRFC 10-2865] module 'myALU' ignored due to previous errors [D:/documents/计算机组成原理/single_CPU/code/project_3.srcs/sources_1/new/myALU.v:24]
