@@ -11,7 +11,7 @@
 // Tool Versions: 
 // Description: myALU 
 // 32位
-// 操作输入为4位 
+// 操作输入为12位 
 // Dependencies: 
 // 
 // Revision:
@@ -42,15 +42,15 @@ module myALU(
          11'b00000100001:
          begin
          {cf,out}=in1+in2;
-         zero = (out==0)?1:0;
-         overflow = 0;
+         zf = (out==0)?1:0;
+         of = 0;
          end
          //sub
          11'b00000100010: 
          begin
          out=in1^in2;
          of= ((in1[31]==0&&in2[31]==1&&out[31]==1)||(in1[31]==1&&in2[31]==0&&out[31]==0))?1:0;
-         zero=(in1 == in2)?1:0;
+         zf=(in1 == in2)?1:0;
          cf=0;
          end
          //subu
@@ -64,7 +64,7 @@ module myALU(
          11'b00000100100:
          begin
          out=in1&in2;
-         zero=(out==0)?1:0;
+         zf=(out==0)?1:0;
          cf=0;
          of=0;
          end 
@@ -72,7 +72,7 @@ module myALU(
          11'b00000100101:
          begin 
          out=in1|in2;
-         zero=(out==0)?1:0;
+         zf=(out==0)?1:0;
          cf=0;
          of=0;
          end 
@@ -105,7 +105,44 @@ module myALU(
          zf=(out==0)?1:0;
          cf=0;
          end
-         default: out=32'hFFFFFFFF;
+         //sltu
+         11'b00000101011:
+         begin
+         out = (in1<in2)?1:0;
+         cf = out;
+         zf=(out==0)?1:0;
+         of = 0;
+         end
+         //shl
+         11'b00000000100:
+         begin
+         {cf,out} = in1<<in2;
+         of=0;
+         zero=(out==0)?1:0;
+         end
+         //shr
+         11'b00000000110:
+         begin
+         out=in0>>in1;
+         cf = in0[in1-1];
+         of = 0;
+         zero = (out==0)?1:0;
+         end
+         //sar
+         11'b00000000111:
+         begin
+         out = ($singed(in1))>>in1;
+         cf = in1[in1 - 1];
+         of = 0;
+         zf = (out == 0)?1:0;
+         end
+         default:
+         begin
+         out=32'hFFFFFFFF;
+         zf = 1;
+         of = 1;
+         cf  =1;
+         end
          endcase
     end
 endmodule
