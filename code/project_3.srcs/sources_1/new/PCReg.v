@@ -35,9 +35,9 @@ module PCReg(
         else 
             begin
                 if (ew)
-                    data <= inputData£»
+                    data <= inputData;
             end
     end
     assign outputData = data;
-    assign type = data[31:28]
+    assign type = data[31:28];
 endmodule
