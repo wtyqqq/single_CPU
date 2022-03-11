@@ -2,10 +2,10 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Tue Mar  8 09:54:59 2022
-# Process ID: 11528
+# Start of session at: Fri Mar 11 13:05:46 2022
+# Process ID: 33164
 # Current directory: D:/documents/计算机组成原理/single_CPU/code
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent30404 D:\documents\计算机组成原理\single_CPU\code\project_3.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29608 D:\documents\计算机组成原理\single_CPU\code\project_3.xpr
 # Log file: D:/documents/计算机组成原理/single_CPU/code/vivado.log
 # Journal file: D:/documents/计算机组成原理/single_CPU/code\vivado.jou
 # Running On: WTY-PC, OS: Windows, CPU Frequency: 4200 MHz, CPU Physical cores: 16, Host memory: 68601 MB
@@ -61,11 +61,8 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2021.2/data/ip'.
-open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 1579.863 ; gain = 0.000
 update_compile_order -fileset sources_1
-close [ open D:/documents/计算机组成原理/single_CPU/code/project_3.srcs/sources_1/new/defines.v w ]
-add_files D:/documents/计算机组成原理/single_CPU/code/project_3.srcs/sources_1/new/defines.v
-update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
+import_files Z:/Ext.v
+import_files Z:/MUX.v
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Mar  8 09:58:36 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 11 13:07:16 2022...
