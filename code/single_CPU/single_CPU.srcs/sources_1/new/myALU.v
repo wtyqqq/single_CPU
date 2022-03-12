@@ -22,7 +22,7 @@
 `include "defines.v"
 
 
-module myALU(
+module ALU(
     in1,in2,op,out,cf,of,zf
     );
     input [31:0] in1,in2;

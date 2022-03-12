@@ -4,7 +4,7 @@ module Ext5(
 	output [31:0] dataOut,
 	input ca
 );
-	assign dataOut = (ca==0)?{27'b0,dataInput}:{{27{idata[4]}},idata};
+	assign dataOut = (ca==0)?{27'b0,dataInput}:{{27{dataInput[4]}},dataInput};
 endmodule
 
 
@@ -18,12 +18,10 @@ module Ext16(
 endmodule
 
 
-
-
 module Ext18(
 	input [17:0] dataInput,
 	output [31:0] dataOut,
 	input ca
 );
 	assign dataOut = (ca == 0)?{14'b0,dataInput}:{{14{dataInput[17]}},dataInput};
-endmodule 	
+endmodule

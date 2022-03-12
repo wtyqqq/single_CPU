@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2022/03/10 23:20:43
+// Create Date: 2022/03/12 19:12:48
 // Design Name: 
-// Module Name: ADD
+// Module Name: ADDU
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -18,15 +18,12 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module ADD(
-    input in1,
-    input in2,
+
+module ADDU(
+    input [31:0] in1,
+    input [31:0] in2,
     output [31:0] out
-);
-    reg [32:0] result;
-    wire signed  [31:0] sa = in1, sb = in2;
-    always @(*) begin
-    result = sa+sb;
-    end
-    assign out = result[31:0];
+    );
+    assign out = in1+in2;
 endmodule
+

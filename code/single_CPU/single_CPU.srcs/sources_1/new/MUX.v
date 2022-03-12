@@ -7,7 +7,7 @@ module MUX(
 	input [31:0] data_in2,
 	output [31:0] dataOut
 );
-	assign dataOut=(m==0)?data_in1:data_in2;
+	assign dataOut=(choice==0)?data_in1:data_in2;
 endmodule
 
 module MMUX(
@@ -24,8 +24,8 @@ always@(choice,data_in1,data_in2,data_in3)
 			2'b00:result<=data_in1;
 			2'b01:result<=data_in2;
 			2'b10:result<=data_in3;
-			default: out <= 32'h00000000;
+			default: result <= 32'h00000000;
 		endcase	
 	end
-	assign dataOut = out;
+	assign dataOut = result;
 endmodule
