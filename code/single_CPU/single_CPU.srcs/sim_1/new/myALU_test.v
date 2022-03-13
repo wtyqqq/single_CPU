@@ -24,7 +24,7 @@ module myALU_test;
     reg [31:0] in1,in2;
     wire [31:0] out;
     wire cf,of,zf;
-    myALU myALU(in1,in2,op,out,cf,of,zf);
+    ALU ALU(in1,in2,op,out,cf,of,zf);
     initial
     begin
        //add

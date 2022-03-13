@@ -131,8 +131,8 @@ module ALU(
          //sar
          6'b000111:
          begin
-         out = ($signed(in1))>>in2;
-         cf = in1[in1 - 1];
+         out = ($signed(in1))>>>in2;
+         cf = in1[in2 - 1];
          of = 0;
          zf = (out == 0)?1:0;
          end
