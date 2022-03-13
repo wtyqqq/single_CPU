@@ -19,20 +19,19 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-`include "defines.v"
 
 
 module ALU(
     in1,in2,op,out,cf,of,zf
     );
     input [31:0] in1,in2;
-    input [10:0] op;
+    input [5:0] op;
     output reg [31:0] out;
     output reg cf,of,zf;
     always@(in1 or in2 or op)begin
         case(op)
         // add 
-         11'b00000100000:
+         6'b100000:
          begin
          out=in1+in2;
          of = ((in1[31]==in2[31])&&(~out[31]==in1[31]))?1:0;
@@ -40,14 +39,14 @@ module ALU(
          cf =0;
          end
          //addu
-         11'b00000100001:
+         6'b100001:
          begin
          {cf,out}=in1+in2;
          zf = (out==0)?1:0;
          of = 0;
          end
          //sub
-         11'b00000100010: 
+         6'b100010: 
          begin
          out=in1^in2;
          of= ((in1[31]==0&&in2[31]==1&&out[31]==1)||(in1[31]==1&&in2[31]==0&&out[31]==0))?1:0;
@@ -55,14 +54,14 @@ module ALU(
          cf=0;
          end
          //subu
-         11'b00000100011:
+         6'b100011:
          begin
          {cf,out}=in1-in2;
          zf=(out==0)?1:0;
          of=0;
          end 
          //and 
-         11'b00000100100:
+         6'b100100:
          begin
          out=in1&in2;
          zf=(out==0)?1:0;
@@ -70,7 +69,7 @@ module ALU(
          of=0;
          end 
          //or
-         11'b00000100101:
+         6'b100101:
          begin 
          out=in1|in2;
          zf=(out==0)?1:0;
@@ -78,7 +77,7 @@ module ALU(
          of=0;
          end 
          //xor
-         11'b00000100110:
+         6'b100110:
          begin
          out=in1^in2;
          zf = (out==0)?1:0;
@@ -86,7 +85,7 @@ module ALU(
          of=0;
          end          
          //nor
-         11'b00000100111:
+         6'b100111:
          begin
          out=~(in1|in2);
          zf=(out==0)?1:0;
@@ -94,7 +93,7 @@ module ALU(
          cf=0;
          end
          //slt
-         11'b00000101010:
+         6'b101010:
          begin
          if(in1[31]==1&&in2[31]==0)
          out=1;
@@ -107,7 +106,7 @@ module ALU(
          cf=0;
          end
          //sltu
-         11'b00000101011:
+         6'b101011:
          begin
          out = (in1<in2)?1:0;
          cf = out;
@@ -115,14 +114,14 @@ module ALU(
          of = 0;
          end
          //shl
-         11'b00000000100:
+         6'b000100:
          begin
          {cf,out} = in1<<in2;
          of=0;
          zf=(out==0)?1:0;
          end
          //shr
-         11'b00000000110:
+         6'b000110:
          begin
          out=in1>>in2;
          cf = in1[in2-1];
@@ -130,7 +129,7 @@ module ALU(
          zf = (out==0)?1:0;
          end
          //sar
-         11'b00000000111:
+         6'b000111:
          begin
          out = ($signed(in1))>>in2;
          cf = in1[in1 - 1];

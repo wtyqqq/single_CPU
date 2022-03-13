@@ -178,6 +178,26 @@ module CPU(
      .outputData(pc_data_out),
      .type(pc_data31_28)
      );
+          
+     wire [31:0] alu_in1;
+     wire [31:0] alu_in2;
+     wire [31:0] alu_out;
+     wire [5:0] ALUop;
+     wire zf;
+     wire cf;
+     //wire n;
+     wire of;
+     ALU ALU(				//ALUÄ£¿é
+     .in1(alu_in1),
+     .in2(alu_in2),
+     .out(alu_out),
+     .op(ALUop),
+     .zf(zf),
+     .cf(cf),
+     //.negative(n),
+     .overflow(of)
+     );
+     
      
      //     wire imem_wena;
      //    assign imem_wena=0;
@@ -190,7 +210,7 @@ module CPU(
      wire [4:0] Rsc=imem_data_out[25:21];
      wire [4:0] Rtc=imem_data_out[20:16];
      wire [4:0] Rdc=imem_data_out[15:11];
-     wire [5:0] op=imem_data_out[31:26];
+     wire [5:0] RegOp=imem_data_out[31:26];
      wire [5:0] func=imem_data_out[5:0];
      wire [15:0] imm16=imem_data_out[15:0];
 /*     IMEM imem(
@@ -222,24 +242,6 @@ module CPU(
      .waddr(rf_rdc),
      .wdata(rf_rd)
      );
-     
-     wire [31:0] alu_in1;
-     wire [31:0] alu_in2;
-     wire [31:0] alu_out;
-     wire [10:0] op;
-     wire zf;
-     wire cf;
-     //wire n;
-     wire of;
-     ALU ALU(				//ALUÄ£¿é
-     .in1(alu_in1),
-     .in2(alu_in2),
-     .out(alu_out),
-     .op(op),
-     .zf(zf),
-     .cf(cf),
-     //.negative(n),
-     .overflow(of)
-     );
+
      
 endmodule
