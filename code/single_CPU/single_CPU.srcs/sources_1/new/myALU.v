@@ -10,8 +10,7 @@
 // Target Devices: 
 // Tool Versions: 
 // Description: myALU 
-// 32位
-// 操作输入为12位 
+// 
 // Dependencies: 
 // 
 // Revision:
@@ -22,13 +21,14 @@
 
 
 module ALU(
-    in1,in2,op,out,cf,of,zf
+    in1,in2,smt,op,out,cf,of,zf
     );
     input [31:0] in1,in2;
+    input [10:6] smt;
     input [5:0] op;
     output reg [31:0] out;
     output reg cf,of,zf;
-    always@(in1 or in2 or op)begin
+    always@(in1 or in2 or smt or op)begin
         case(op)
         // add 
          6'b100000:
@@ -113,14 +113,37 @@ module ALU(
          zf=(out==0)?1:0;
          of = 0;
          end
-         //shl
+         //sll
+         6'b000000:
+         begin 
+         {cf,out} = in1<<smt;
+         of=0;
+         zf=(out==0)?1:0;
+         end
+         //slr
+         6'b000010:
+         begin 
+         out=in1>>smt;
+         cf = in1[smt-1];
+         of = 0;
+         zf = (out==0)?1:0;
+         end
+         //sra
+         6'b000011:
+         begin 
+         out = ($signed(in1))>>>smt;
+         cf = in1[smt-1];
+         of = 0;
+         zf = (out == 0)?1:0;
+         end
+         //sllv
          6'b000100:
          begin
          {cf,out} = in1<<in2;
          of=0;
          zf=(out==0)?1:0;
          end
-         //shr
+         //slrv
          6'b000110:
          begin
          out=in1>>in2;
@@ -128,11 +151,11 @@ module ALU(
          of = 0;
          zf = (out==0)?1:0;
          end
-         //sar
+         //srav
          6'b000111:
          begin
          out = ($signed(in1))>>>in2;
-         cf = in1[in2 - 1];
+         cf = in1[in2-1];
          of = 0;
          zf = (out == 0)?1:0;
          end
