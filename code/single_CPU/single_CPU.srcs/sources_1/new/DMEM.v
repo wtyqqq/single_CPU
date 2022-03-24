@@ -24,8 +24,6 @@ module DMEM(input WE,
     input [31:0] addr,
     output [31:0] outp,
     input [31:0] inpt);
-
-    
     reg [31:0] RAM[255:0];
 
     always @(posedge clk) begin

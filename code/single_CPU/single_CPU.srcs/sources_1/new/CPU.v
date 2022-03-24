@@ -195,15 +195,13 @@ module CPU(
      .zf(zf),
      .cf(cf),
      //.negative(n),
-     .overflow(of)
+     .of(of)
      );
      
      
-     //     wire imem_wena;
-     //    assign imem_wena=0;
-     //     wire [31:0] imem_addr;
-     //    wire [31:0] imem_data_in;
-     //     assign imem_data_in=32'b0;
+     wire [31:0] imem_addr;
+     wire [31:0] imem_data_in;
+     assign imem_data_in=32'b0;
      wire [31:0] imem_data_out;
      wire [25:0] target=imem_data_out[25:0];
      wire [4:0] sa=imem_data_out[10:6];
@@ -213,13 +211,12 @@ module CPU(
      wire [5:0] RegOp=imem_data_out[31:26];
      wire [5:0] func=imem_data_out[5:0];
      wire [15:0] imm16=imem_data_out[15:0];
-/*     IMEM imem(
+     IMEM imem(
      .clk(clk),
-     .wena(imem_wena),
      .addr(imem_addr),
-     .data_in(imem_data_in),
-     .data_out(imem_data_out)
-     );*/
+     .inpt(imem_data_in),
+     .outp(imem_data_out)
+     );
      
      wire rf_clk;
      wire rf_rst;
@@ -242,6 +239,23 @@ module CPU(
      .waddr(rf_rdc),
      .wdata(rf_rd)
      );
-
+     
+     //DMEM
+     wire dmem_we;
+     wire dmem_re;
+     wire [31:0] dmem_addr;
+     wire [31:0] dmem_data_in;
+     wire [31:0] dmem_data_out;
+     wire [31:0] dmem_data;
+     DMEM dmem(
+     .clk(clk),
+     .WE(dmem_we),
+     .addr(dmem_addr),
+     .inpt(dmem_data_in),
+     .outp(dmem_data_out)
+     );
+     wire [31:0] j_jal={npc_out[31:28],imem_data_out[25:0],2'b0};
+    
+    
      
 endmodule

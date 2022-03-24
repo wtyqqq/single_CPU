@@ -48,7 +48,7 @@ module ALU(
          //sub
          6'b100010: 
          begin
-         out=in1^in2;
+         out=in1-in2;
          of= ((in1[31]==0&&in2[31]==1&&out[31]==1)||(in1[31]==1&&in2[31]==0&&out[31]==0))?1:0;
          zf=(in1 == in2)?1:0;
          cf=0;
@@ -158,6 +158,14 @@ module ALU(
          cf = in1[in2-1];
          of = 0;
          zf = (out == 0)?1:0;
+         end
+         6'b101010:
+         //lui
+         begin
+         out = in2 << 16;
+         zf = (out ==0)?1:0;
+         of = 0;
+         cf = 0;
          end
          default:
          begin

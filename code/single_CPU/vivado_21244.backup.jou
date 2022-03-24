@@ -2,14 +2,13 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Mar 13 09:48:45 2022
-# Process ID: 28748
+# Start of session at: Wed Mar 16 15:47:12 2022
+# Process ID: 21244
 # Current directory: C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19152 C:\Users\wty02\Desktop\CPU\single_CPU\code\single_CPU\single_CPU.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent37704 C:\Users\wty02\Desktop\CPU\single_CPU\code\single_CPU\single_CPU.xpr
 # Log file: C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/vivado.log
 # Journal file: C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.xpr
-update_compile_order -fileset sources_1
 update_compile_order -fileset sources_1
