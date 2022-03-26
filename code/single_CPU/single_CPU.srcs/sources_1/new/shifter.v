@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2022/03/10 23:20:43
+// Create Date: 2022/03/26 16:47:45
 // Design Name: 
-// Module Name: ADD
+// Module Name: shifter
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -18,14 +18,15 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module ADD32(
-    input in1,
-    input in2,
-    output reg [31:0] out
-);
 
-always @(posedge in1 or in2)
-begin
-assign out = in1 + in2; 
-end
+
+module shifter(
+    input [31:0] in1,
+    input [31:0] in2,
+    output reg [31:0] out
+    );
+    always@(posedge in1 or in2)
+    begin
+        out = in1<<in2;    
+    end
 endmodule

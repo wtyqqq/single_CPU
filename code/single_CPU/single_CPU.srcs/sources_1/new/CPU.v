@@ -36,25 +36,84 @@ module CPU(
     output Z            	//调试输出用...
     );
      
+     
+     
+     
+     //CU
+    wire PC_clk;
+    wire [5:0] ALUControl;
+    wire regFileW;
+    wire regFileClk;
+    wire memRead;
+    wire memWrite;
+    wire memToReg;
+    wire ALUsrc;
+    wire regWrite;
+    wire jump;
+    wire [3:0] branch;
+    wire PCwrite;
+    wire readShamt;
+    wire zeroExt;
+    //ALU
+    wire [31:0] alu_out;
+    wire zf;
+    wire cf;
+    //IMEM
+     wire [31:0] imem_addr;
+     wire [31:0] imem_data_in;
+     wire [31:0] imem_data_out;
+     wire [25:0] target=imem_data_out[25:0];
+     wire [4:0] sa=imem_data_out[10:6];
+     wire [4:0] Rsc=imem_data_out[25:21];
+     wire [4:0] Rtc=imem_data_out[20:16];
+     wire [4:0] Rdc=imem_data_out[15:11];
+     wire [5:0] RegOp=imem_data_out[31:26];
+     wire [5:0] func=imem_data_out[5:0];
+     wire [15:0] imm16=imem_data_out[15:0];
+     wire signExt_0_input16; 
+     //ext01
+     wire [31:0] ext01_out;
+     //MUX1
+     wire [31:0] mux_1_out;
+     //pc
+     wire pc_clk;
+     wire pc_rst;
+     assign pc_rst=rst;
+     wire [31:0] pc_data_in;
+     wire [31:0] pc_data_out;
+     wire [3:0] pc_data31_28;
+     //npc
+     wire of;
      wire [31:0] npc_out;
-     wire [31:0] npc_in;
-         
+     
+     //RegFile
+     wire rf_clk;
+     wire rf_rst;
+     wire rf_we;
+     wire [4:0]readAddr1;
+     wire [4:0]readAddr2;
+     wire [4:0]rf_rdc;
+     wire [31:0]rf_rd;
+     wire [31:0]readData1;
+     wire [31:0]readData2;
+     //add32_1
+     wire add32_1_out;
+     //shifter_1
+     wire shifter1_out;
+     
      ADDU NPC(				//NPC模块
-     .in1(npc_in),			//功能：每次将pc+4，指向下一条指令地址
+     .in1(pc_data_out),			//功能：每次将pc+4，指向下一条指令地址
      .in2(32'd4),
      .out(npc_out)
      );
      
-     wire [31:0] mux1_in1;
-     wire [31:0] mux1_in2;
-     wire [31:0] mux1_out;
      wire mux1_m;
      
      MUX MUX1(				//数据选择器1
-     .choice(mux1_m),			//功能：根据不同的信号选择不用的输入作为输出
-     .data_in1(mux1_in1),
-     .data_in2(mux1_in2),
-     .dataOut(mux1_out)
+     .choice(ALUsrc),			//输入为ALUsrc，控制ALUin2的输入来源
+     .data_in1(readData2),
+     .data_in2(ext01_out),//ALUsrc为1,输出立即数
+     .dataOut(mux_1_out)
      );
      
      wire [31:0] mux2_in1;
@@ -70,70 +129,13 @@ module CPU(
      .dataOut(mux2_out)
      );
     
-     wire [31:0] mux3_in1;
-     wire [31:0] mux3_in2;
      wire [31:0] mux3_out;
      wire mux3_m;			//数据选择器3
      MUX MUX3(
      .choice(mux3_m),
-     .data_in1(mux3_in1),
-     .data_in2(mux3_in2),
+     .data_in1(npc_out),
+     .data_in2(add32_1_out),
      .dataOut(mux3_out)
-     );
-    
-     wire [31:0] mux4_in1;
-     wire [31:0] mux4_in2;
-     wire [31:0] mux4_out;
-     wire mux4_m;			//数据选择器4
-     MUX MUX4(
-     .choice(mux4_m),
-     .data_in1(mux4_in1),
-     .data_in2(mux4_in2),
-     .dataOut(mux4_out)
-     );
-     
-     wire [31:0] mux5_in1;
-     wire [31:0] mux5_in2;
-     wire [31:0] mux5_out;
-     wire mux5_m;
-     MUX MUX5(				//数据选择器5
-     .choice(mux5_m),
-     .data_in1(mux5_in1),
-     .data_in2(mux5_in2),
-     .dataOut(mux5_out)
-     );
-     
-     wire [31:0] mux6_in1;
-     wire [31:0] mux6_in2;
-     wire [31:0] mux6_out;
-     wire mux6_m;
-     MUX MUX6(				//数据选择器6
-     .choice(mux6_m),
-     .data_in1(mux6_in1),
-     .data_in2(mux6_in2),
-     .dataOut(mux6_out)
-     );
-     
-     wire [31:0] mux7_in1;
-     wire [31:0] mux7_in2;
-     wire [31:0] mux7_out;
-     wire mux7_m;
-     MUX MUX7(				//数据选择器7
-     .choice(mux7_m),
-     .data_in1(mux7_in1),
-     .data_in2(mux7_in2),
-     .dataOut(mux7_out)
-     );
-     
-     wire [31:0] mux8_in1;
-     wire [31:0] mux8_in2;
-     wire [31:0] mux8_out;
-     wire mux8_m;
-     MUX MUX8(				//数据选择器8
-     .choice(mux8_m),
-     .data_in1(mux8_in1),
-     .data_in2(mux8_in2),
-     .dataOut(mux8_out)
      );
      
      wire [4:0] ext5_in;
@@ -145,14 +147,26 @@ module CPU(
      .ca(ext5_c)
      );
      
-     wire [15:0] ext16_in;
-     wire [31:0] ext16_out;
+
      wire ext16_c;
-     Ext16 ext16(		//数据扩充器
-     .dataInput(ext16_in),
-     .dataOut(ext16_out),
-     .ca(ext16_c)
+      Ext16 Ext01(		//数据扩充器 输入指令中16位立即数，然后转换为32位
+     .dataInput(imm16),
+     .dataOut(ext01_out),
+     .ca(zeroExt) //0为符号扩展
      );
+
+     shifter shifter1(
+     .in1(ext01_out),
+     .in2(32'd2),
+     .out(shifter1_out)
+     );
+
+     ADD32 add32_1(
+     .in1(pc_data_out),
+     .in2(shifter1_out),
+     .out(add32_1_out)
+     );
+     
      
      wire [15:0] ext18_in;
      wire [31:0] ext18_out;
@@ -164,34 +178,22 @@ module CPU(
      );
      
       //    wire pc_ena;
-     wire pc_clk;
-     wire pc_rst;
-     assign pc_rst=rst;
-     wire [31:0] pc_data_in;
-     wire [31:0] pc_data_out;
-     wire [3:0] pc_data31_28;
+
      PCReg PC(				//PC寄存器
-     .clk(pc_clk),			//功能：存放下一条指令的地址
+     .clk(clk),			//功能：存放下一条指令的地址
      .rst(pc_rst),
-     .ew(1'b1),
+     .ew(PCwrite),
      .inputData(pc_data_in),
      .outputData(pc_data_out),
-     .type(pc_data31_28)
+     .data31_28(pc_data31_28)
      );
           
-     wire [31:0] alu_in1;
-     wire [31:0] alu_in2;
-     wire [31:0] alu_out;
-     wire [5:0] ALUop;
-     wire zf;
-     wire cf;
-     //wire n;
-     wire of;
+
      ALU ALU(				//ALU模块
-     .in1(alu_in1),
-     .in2(alu_in2),
+     .in1(),
+     .in2(mux_1_out),
      .out(alu_out),
-     .op(ALUop),
+     .op(ALUControl),
      .zf(zf),
      .cf(cf),
      //.negative(n),
@@ -199,18 +201,8 @@ module CPU(
      );
      
      
-     wire [31:0] imem_addr;
-     wire [31:0] imem_data_in;
      assign imem_data_in=32'b0;
-     wire [31:0] imem_data_out;
-     wire [25:0] target=imem_data_out[25:0];
-     wire [4:0] sa=imem_data_out[10:6];
-     wire [4:0] Rsc=imem_data_out[25:21];
-     wire [4:0] Rtc=imem_data_out[20:16];
-     wire [4:0] Rdc=imem_data_out[15:11];
-     wire [5:0] RegOp=imem_data_out[31:26];
-     wire [5:0] func=imem_data_out[5:0];
-     wire [15:0] imm16=imem_data_out[15:0];
+
      IMEM imem(
      .clk(clk),
      .addr(imem_addr),
@@ -218,24 +210,17 @@ module CPU(
      .outp(imem_data_out)
      );
      
-     wire rf_clk;
-     wire rf_rst;
+
      assign rf_rst=rst;
-     wire rf_we;
-     wire [4:0]rf_rsc;
-     wire [4:0]rf_rtc;
-     wire [4:0]rf_rdc;
-     wire [31:0]rf_rd;
-     wire [31:0]rf_rs;
-     wire [31:0]rf_rt;
+
      RegFile cpu_ref(		//通用寄存器模块
      .clk(rf_clk),
      .rst(rf_rst),
      .we(rf_we),
-     .raddr1(rf_rsc),
-     .rdata1(rf_rs),
-     .raddr2(rf_rtc),
-     .rdata2(rf_rt),
+     .raddr1(readAddr1),
+     .rdata1(readData1),
+     .raddr2(readAddr2),
+     .rdata2(readData2),
      .waddr(rf_rdc),
      .wdata(rf_rd)
      );
@@ -256,6 +241,25 @@ module CPU(
      );
      wire [31:0] j_jal={npc_out[31:28],imem_data_out[25:0],2'b0};
     
+    
+    //CU
+
+    controlUnit CU(
+        .memRead(memRead),
+        .memWrite(memWrite),
+        .ALUControl(ALUControl),
+        .memToReg(memToReg),
+        .ALUsrc(ALUsrc),
+        .regWrite(regWrite),
+        .memRead(memRead),
+        .memWrite(memWrite),
+        .branch(branch),
+        .jump(jump),
+        .PCwrite(PCwrite),
+        .readShamt(readShamt),
+        .zeroExt(zeroExt)
+        );
+    //IR
     
      
 endmodule

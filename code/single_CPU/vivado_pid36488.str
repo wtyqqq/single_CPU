@@ -1,0 +1,377 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:38:27 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 36488
+License: Customer
+
+Current time: 	Fri Mar 25 11:20:18 CST 2022
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 3840x2160
+Screen resolution (DPI): 144
+Available screens: 2
+Available disk space: 233 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=18
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/vivado/Vivado/2018.3/tps/win64/jre9.0.4
+Java executable location: 	D:/vivado/Vivado/2018.3/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	wty02
+User home directory: C:/Users/wty02
+User working directory: C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/vivado/Vivado
+HDI_APPROOT: D:/vivado/Vivado/2018.3
+RDI_DATADIR: D:/vivado/Vivado/2018.3/data
+RDI_BINDIR: D:/vivado/Vivado/2018.3/bin
+
+Vivado preferences file location: C:/Users/wty02/AppData/Roaming/Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: C:/Users/wty02/AppData/Roaming/Xilinx/Vivado/2018.3/
+Vivado layouts directory: C:/Users/wty02/AppData/Roaming/Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	D:/vivado/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/vivado.log
+Vivado journal file location: 	C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/vivado.jou
+Engine tmp dir: 	C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/.Xil/Vivado-36488-DESKTOP-SO672K3
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/vivado/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: D:/vivado/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: D:/vivado/Vivado/2018.3
+XILINX_SDK: D:/vivado/SDK/2018.3
+XILINX_VIVADO: D:/vivado/Vivado/2018.3
+XILINX_VIVADO_HLS: D:/vivado/Vivado/2018.3
+
+
+GUI allocated memory:	188 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 762 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: C:\Users\wty02\Desktop\CPU\single_CPU\code\single_CPU\single_CPU.xpr. Version: Vivado v2018.3 
+// bx (cp):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vivado/Vivado/2018.3/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 112 MB (+114750kb) [00:00:06]
+// [Engine Memory]: 630 MB (+509254kb) [00:00:06]
+// [GUI Memory]: 123 MB (+5664kb) [00:00:06]
+// [GUI Memory]: 138 MB (+9789kb) [00:00:07]
+// [Engine Memory]: 736 MB (+78266kb) [00:00:07]
+// WARNING: HEventQueue.dispatchEvent() is taking  1850 ms.
+// Project name: single_CPU; location: C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU; part: xc7z010iclg225-1L
+dismissDialog("Open Project"); // bx (cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 762 MB. GUI used memory: 80 MB. Current time: 3/25/22, 11:20:19 AM CST
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0); // B (D, cp)
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, CPU (CPU.v)]", 2, true); // B (D, cp) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, CPU (CPU.v)]", 2); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, CPU (CPU.v)]", 2, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, CPU (CPU.v)]", 2, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // X (q, cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // X (q, cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // X (q, cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // X (q, cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // X (q, cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // X (q, cp)
+selectMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // X (q, cp)
+dismissMenu(RDIResource.MainWinMenuMgr_LAYOUT, "Layout"); // X (q, cp)
+selectButton(RDIResourceCommand.RDICommands_SETTINGS, "settings"); // B (f, cp)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// F (cp): Settings: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  1297 ms.
+expandTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor]", 6); // L (C, F)
+selectTree(PAResourceQtoS.SettingsDialog_OPTIONS_TREE, "[optionsRoot, Text Editor, Fonts and Colors]", 10, false); // L (C, F)
+selectButton(RDIResource.BaseDialog_APPLY, "Apply"); // a (F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// [GUI Memory]: 146 MB (+1190kb) [00:00:44]
+dismissDialog("Settings"); // F (cp)
+// Elapsed time: 12 seconds
+selectCodeEditor("CPU.v", 284, 1284); // cl (w, cp)
+// [GUI Memory]: 185 MB (+32649kb) [00:00:59]
+// Elapsed time: 69 seconds
+selectCodeEditor("CPU.v", 478, 1349); // cl (w, cp)
+selectCodeEditor("CPU.v", 450, 1367); // cl (w, cp)
+selectCodeEditor("CPU.v", 172, 1316); // cl (w, cp)
+// Elapsed time: 37 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, CPU (CPU.v)]", 2); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, CPU (CPU.v), ALU : ALU (myALU.v)]", 16, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, CPU (CPU.v), imem : IMEM (IMEM.v)]", 17, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, CPU (CPU.v), imem : IMEM (IMEM.v)]", 17, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Elapsed time: 124 seconds
+selectCodeEditor("IMEM.v", 246, 559); // cl (w, cp)
+selectCodeEditor("IMEM.v", 338, 1140); // cl (w, cp)
+// [Engine Memory]: 774 MB (+946kb) [00:05:35]
+// Elapsed time: 29 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CPU.v", 1); // k (j, cp)
+selectCodeEditor("CPU.v", 529, 875); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("CPU.v", 312, 1383); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 782 MB. GUI used memory: 97 MB. Current time: 3/25/22, 11:25:59 AM CST
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, controlUnit (controlUnit.v)]", 15, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, controlUnit (controlUnit.v)]", 15, false, false, false, false, false, true); // B (D, cp) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (D, cp)
+// Elapsed time: 35 seconds
+selectCodeEditor("controlUnit.v", 1072, 773); // cl (w, cp)
+selectCodeEditor("controlUnit.v", 682, 787); // cl (w, cp)
+selectCodeEditor("controlUnit.v", 634, 726); // cl (w, cp)
+selectCodeEditor("controlUnit.v", 664, 637); // cl (w, cp)
+selectCodeEditor("controlUnit.v", 362, 629); // cl (w, cp)
+selectCodeEditor("controlUnit.v", 475, 762); // cl (w, cp)
+selectCodeEditor("controlUnit.v", 431, 679); // cl (w, cp)
+typeControlKey((HResource) null, "controlUnit.v", 'c'); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "IMEM.v", 2); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CPU.v", 1); // k (j, cp)
+selectCodeEditor("CPU.v", 198, 1374); // cl (w, cp)
+typeControlKey((HResource) null, "CPU.v", 'v'); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (D, cp)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (D, cp)
+// Elapsed time: 29 seconds
+selectCodeEditor("CPU.v", 188, 1119); // cl (w, cp)
+selectCodeEditor("CPU.v", 203, 1324); // cl (w, cp)
+selectCodeEditor("CPU.v", 260, 1296); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RegFile (regFIle.v)]", 14, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, RegFile (regFIle.v)]", 14, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, controlUnit (controlUnit.v)]", 15, false); // B (D, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CPU.v", 1); // k (j, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 23 seconds
+selectCodeEditor("CPU.v", 146, 1356); // cl (w, cp)
+selectCodeEditor("CPU.v", 131, 1273); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("CPU.v", 139, 1219); // cl (w, cp)
+selectCodeEditor("CPU.v", 140, 1220, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("CPU.v", 167, 1247); // cl (w, cp)
+selectCodeEditor("CPU.v", 164, 1245); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+selectCodeEditor("CPU.v", 184, 1161); // cl (w, cp)
+selectCodeEditor("CPU.v", 216, 1183); // cl (w, cp)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("CPU.v", 234, 1185); // cl (w, cp)
+// Elapsed time: 165 seconds
+selectCodeEditor("CPU.v", 310, 1179); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 808 MB. GUI used memory: 128 MB. Current time: 3/25/22, 11:41:34 AM CST
+// [GUI Memory]: 206 MB (+12788kb) [00:21:29]
+// [Engine Memory]: 834 MB (+22335kb) [00:21:29]
+// [GUI Memory]: 226 MB (+10124kb) [00:22:00]
+// Elapsed time: 710 seconds
+selectCodeEditor("CPU.v", 298, 47); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 30 seconds
+selectCodeEditor("CPU.v", 255, 404); // cl (w, cp)
+selectCodeEditor("CPU.v", 254, 406); // cl (w, cp)
+selectCodeEditor("CPU.v", 269, 425); // cl (w, cp)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, CPU (CPU.v)]", 2); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, CPU (CPU.v), dmem : DMEM (DMEM.v)]", 19, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, CPU (CPU.v), dmem : DMEM (DMEM.v)]", 19, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectCodeEditor("DMEM.v", 597, 1109); // cl (w, cp)
+selectCodeEditor("DMEM.v", 454, 898); // cl (w, cp)
+selectCodeEditor("DMEM.v", 624, 1086); // cl (w, cp)
+selectCodeEditor("DMEM.v", 715, 1288); // cl (w, cp)
+selectCodeEditor("DMEM.v", 590, 1363); // cl (w, cp)
+// Elapsed time: 78 seconds
+selectCodeEditor("DMEM.v", 288, 962); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "regFIle.v", 4); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controlUnit.v", 3); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CPU.v", 1); // k (j, cp)
+selectCodeEditor("CPU.v", 379, 1088); // cl (w, cp)
+// Elapsed time: 29 seconds
+selectCodeEditor("CPU.v", 414, 1184); // cl (w, cp)
+// Elapsed time: 116 seconds
+selectCodeEditor("CPU.v", 209, 474); // cl (w, cp)
+selectCodeEditor("CPU.v", 244, 1152); // cl (w, cp)
+selectCodeEditor("CPU.v", 254, 1156); // cl (w, cp)
+// Elapsed time: 32 seconds
+selectCodeEditor("CPU.v", 502, 1101); // cl (w, cp)
+selectCodeEditor("CPU.v", 393, 1188); // cl (w, cp)
+selectCodeEditor("CPU.v", 380, 1185); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 289 seconds
+selectCodeEditor("CPU.v", 804, 15); // cl (w, cp)
+selectCodeEditor("CPU.v", 738, 844); // cl (w, cp)
+selectCodeEditor("CPU.v", 505, 1127); // cl (w, cp)
+selectCodeEditor("CPU.v", 437, 1236); // cl (w, cp)
+selectCodeEditor("CPU.v", 422, 1308); // cl (w, cp)
+// Elapsed time: 53 seconds
+selectCodeEditor("CPU.v", 712, 1330); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 408 seconds
+selectCodeEditor("CPU.v", 848, 106); // cl (w, cp)
+selectCodeEditor("CPU.v", 359, 1153); // cl (w, cp)
+selectCodeEditor("CPU.v", 387, 1154); // cl (w, cp)
+selectCodeEditor("CPU.v", 387, 1155, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("CPU.v", 387, 1156); // cl (w, cp)
+selectCodeEditor("CPU.v", 380, 1159); // cl (w, cp)
+selectCodeEditor("CPU.v", 335, 1184); // cl (w, cp)
+selectCodeEditor("CPU.v", 312, 1179); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controlUnit.v", 3); // k (j, cp)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "controlUnit.v", 3, true, false); // k (j, cp) - Popup Trigger
+selectMenuItem(RDIResource.BaseWorkspace_FLOAT, "Float"); // af (cp)
+floatView(PAResourceOtoP.PAViews_CODE, "controlUnit.v"); // ax (aI, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 851 MB. GUI used memory: 131 MB. Current time: 3/25/22, 12:01:35 PM CST
+selectCodeEditor("regFIle.v", 1736, 859); // cl (w, cp)
+selectCodeEditor("regFIle.v", 1774, 849); // cl (w, cp)
+selectCodeEditor("regFIle.v", 902, 846); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "CPU.v", 1); // k (j, cp)
+selectCodeEditor("CPU.v", 364, 1190); // cl (w, cp)
+selectCodeEditor("CPU.v", 107, 1184); // cl (w, cp)
+selectCodeEditor("CPU.v", 545, 1182); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 35 seconds
+selectCodeEditor("CPU.v", 907, 1168); // cl (w, cp)
+selectCodeEditor("CPU.v", 875, 1232); // cl (w, cp)
+selectCodeEditor("CPU.v", 837, 1216); // cl (w, cp)
+selectCodeEditor("CPU.v", 839, 1253); // cl (w, cp)
+selectCodeEditor("CPU.v", 794, 1267); // cl (w, cp)
+// Elapsed time: 1552 seconds
+selectCodeEditor("CPU.v", 2137, 251); // cl (w, cp)
+selectCodeEditor("CPU.v", 2112, 253); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 851 MB. GUI used memory: 127 MB. Current time: 3/25/22, 12:31:35 PM CST
+// Elapsed time: 728 seconds
+selectCodeEditor("CPU.v", 2118, 953); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 851 MB. GUI used memory: 125 MB. Current time: 3/25/22, 1:01:35 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 851 MB. GUI used memory: 125 MB. Current time: 3/25/22, 1:31:36 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 851 MB. GUI used memory: 125 MB. Current time: 3/25/22, 2:01:36 PM CST
+// Elapsed time: 5781 seconds
+selectCodeEditor("CPU.v", 547, 849); // cl (w, cp)
+selectCodeEditor("CPU.v", 546, 770); // cl (w, cp)
+selectCodeEditor("CPU.v", 533, 755); // cl (w, cp)
+selectCodeEditor("CPU.v", 547, 727); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("CPU.v", 560, 1306); // cl (w, cp)
+selectCodeEditor("CPU.v", 559, 1293); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// HMemoryUtils.trashcanNow. Engine heap size: 855 MB. GUI used memory: 125 MB. Current time: 3/25/22, 2:31:37 PM CST
+// Elapsed time: 1902 seconds
+maximizeFrame(PAResourceOtoP.PAViews_CODE, "controlUnit.v"); // ax (aI, aK)
+unMaximizeFrame(PAResourceOtoP.PAViews_CODE, "controlUnit.v"); // ax (aI, aK)
+// PAResourceOtoP.PAViews_CODE: Code: close view
+closeFrame(PAResourceOtoP.PAViews_CODE, "controlUnit.v"); // ax (aI, aK)
+dockFrame(PAResourceOtoP.PAViews_CODE, "controlUnit.v"); // ax (aI, aK)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 3:01:37 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 126 MB. Current time: 3/25/22, 3:31:37 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 4:01:38 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 4:31:38 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 5:01:39 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 5:31:39 PM CST
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 597 ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 6:01:40 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 6:31:40 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 7:01:41 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 7:31:41 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 8:01:42 PM CST
+// WARNING: HSwingWorker (Monitor File Timestamp Swing Worker) is taking 633 ms to process. Increasing delay to 2000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 8:31:42 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 9:01:42 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 9:31:43 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 10:01:43 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 10:31:44 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 11:01:44 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/25/22, 11:31:44 PM CST
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 975439ms to process. Increasing delay to 2000 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1089 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 126 MB. Current time: 3/26/22, 12:06:47 AM CST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 978273 ms. Increasing delay to 2934819 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  2161 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/26/22, 1:10:51 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/26/22, 1:40:55 PM CST
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 5 ms. Decreasing delay to 2005 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/26/22, 2:10:55 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 857 MB. GUI used memory: 125 MB. Current time: 3/26/22, 2:40:56 PM CST

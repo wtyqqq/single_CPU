@@ -14,7 +14,7 @@ module Ext16(
 	output [31:0] dataOut,
 	input ca
 );
-	assign dataOut=(ca == 0)?{16'b0,dataInput}:{{16{dataInput[15]}},dataInput};
+	assign dataOut=(ca == 1)?{16'b0,dataInput}:{{16{dataInput[15]}},dataInput};
 endmodule
 
 

@@ -26,7 +26,7 @@ module PCReg(
     input ew,
     input [31:0] inputData,
     output [31:0] outputData,
-    output [31:28] type //前四位可以判断指令类型
+    output [31:28] data31_28
     );
     reg [31:0] data;
     always@(posedge clk or posedge rst)begin 
@@ -39,5 +39,5 @@ module PCReg(
             end
     end
     assign outputData = data;
-    assign type = data[31:28];
+    assign data31_28 = data[31:28];
 endmodule
