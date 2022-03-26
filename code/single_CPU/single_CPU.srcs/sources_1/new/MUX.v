@@ -10,6 +10,16 @@ module MUX(
 	assign dataOut=(choice==0)?data_in1:data_in2;
 endmodule
 
+module spMUX(
+	input choice,
+	input [31:0] data_in1,
+	input [31:0] data_in2,
+	output [4:0] dataOut
+);
+	assign dataOut=(choice==0)?data_in1:data_in2;
+endmodule
+
+
 module MMUX(
 	input [1:0] choice,
 	input [31:0] data_in1,
@@ -17,6 +27,7 @@ module MMUX(
 	input [31:0] data_in3,
 	output [31:0] dataOut
 );
+
 reg [31:0] result;
 always@(choice,data_in1,data_in2,data_in3)
 	begin

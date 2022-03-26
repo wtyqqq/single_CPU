@@ -34,7 +34,8 @@ module controlUnit(
         output reg jump,
         output reg PCwrite,
         output reg zeroExt,
-        output reg readShamt
+        output reg readShamt,
+        output reg [1:0] saveOpt
     );
     
     always @(op or fun)
