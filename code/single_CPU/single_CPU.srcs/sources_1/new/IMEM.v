@@ -21,20 +21,19 @@
 
 `timescale 1ns / 1ps
 
-module IMEM(input WE,
+module IMEM(
     input clk,
     input [31:0] addr,
-    output [31:0] outp,
-    input [31:0] inpt);
-
-    
+    output reg [31:0] outp
+);
     reg [31:0] ROM[255:0];
-    always @(posedge clk) begin
-    if(WE==0)
-        begin
-            ROM[addr]<=inpt;
-        end
+    initial
+    begin
+    $readmemb("./rom.txt",ROM);
     end
-    assign outp=ROM[addr];
+    always @(posedge clk) begin
+     outp=ROM[addr];
+     end
+    //assign outp=ROM[addr];
 endmodule
 

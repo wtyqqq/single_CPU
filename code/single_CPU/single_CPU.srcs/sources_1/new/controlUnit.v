@@ -46,7 +46,7 @@ module controlUnit(
                 ALUControl = fun;
                 case(fun)
                 //所有的R型指令
-                    6'b100000: {regDst,ALUsrc,memToReg,regWrite,memRead,memWrite,branch,jump,PCwrite,zeroExt,readShamt}=18'b1_0_0_1_0_0_0000_0_1_0_0; //add
+                    6'b100000: {regDst,ALUsrc,memToReg,regWrite,memRead,memWrite,branch,jump,PCwrite,zeroExt,readShamt}=18'b10010000000100; //add
                     6'b100001: {regDst,ALUsrc,memToReg,regWrite,memRead,memWrite,branch,jump,PCwrite,zeroExt,readShamt}=18'b1_0_0_1_0_0_0000_0_1_0_0; //addu
                     6'b100010: {regDst,ALUsrc,memToReg,regWrite,memRead,memWrite,branch,jump,PCwrite,zeroExt,readShamt}=18'b1_0_0_1_0_0_0000_0_1_0_0; //sub
                     6'b100011: {regDst,ALUsrc,memToReg,regWrite,memRead,memWrite,branch,jump,PCwrite,zeroExt,readShamt}=18'b1_0_0_1_0_0_0000_0_1_0_0; //subu

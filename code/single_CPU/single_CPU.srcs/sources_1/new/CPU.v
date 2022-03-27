@@ -92,6 +92,7 @@ module CPU(
      
      //RegFile
      wire rf_clk;
+     assign rf_clk=clk;
      wire rf_rst;
      wire [4:0]readAddr1;
      wire [4:0]readAddr2;
@@ -117,7 +118,7 @@ module CPU(
      wire [31:0] dmem_data;
      
      //ext5
-     wire ext5_c;
+     wire [31:0] ext02_out;
      
      ADDU NPC(				//NPC模块 处理的是PC+4
      .in1(pc_data_out),			//功能：每次将pc+4，指向下一条指令地址
@@ -170,7 +171,7 @@ module CPU(
      MUX MUX6(
      .choice(readShamt),
      .data_in1(readData1),
-     .data_in2(ext5_c),
+     .data_in2(ext02_out),
      .dataOut(mux_6_out)
      );
 
@@ -191,8 +192,8 @@ module CPU(
      
       Ext5 Ext02(		//数据扩充器 输入指令中5位shamt，然后转换为32位，这里处理的是BXX指令的立即数，转为32位
          .dataInput(sa),
-         .dataOut(ext01_out),
-         .ca(ext5_c) //0为符号扩展
+         .dataOut(ext02_out),
+         .ca(zeroExt) //0为符号扩展
       );
 
      shifter shifter1(//这里处理BXX指令的立即数地址
@@ -286,6 +287,7 @@ module CPU(
         );
     
      BranchControl BranchControl(
+     .Input(branch),
      .Output(BranchControlOut),
      .Sign_in(alu_out[0]),
      .Zero_in(zf)
