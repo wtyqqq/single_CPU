@@ -100,15 +100,13 @@ module CPU(
      wire [31:0]readData1;
      wire [31:0]readData2;
      //add32_1
-     wire add32_1_out;
+     wire [31:0] add32_1_out;
      //shifter_1
-     wire shifter1_out;
+     wire [31:0] shifter1_out;
      //BranchControl
      wire BranchControlOut;
      //JumpADDer_1
-     wire jumpAddr;
-     //
-     wire shift_2_out;
+     wire [31:0] jumpAddr_1_out;
      
      //DMEM
      wire dmem_we;
@@ -158,7 +156,7 @@ module CPU(
      MUX MUX4(
      .choice(jump),
      .data_in1(mux3_out),//PC+4或者BXX的地址
-     .data_in2(jumpAddr),
+     .data_in2(jumpAddr_1_out),
      .dataOut(pc_data_in)
      );
      
@@ -177,17 +175,11 @@ module CPU(
      );
 
      JumpADDer JumpADDer_1(
-     .inst_add(shift_2_out),
+     .inst_add(target),
      .PCPlus4(npc_out[31:28]),
-     .out(jumpAddr)
+     .out(jumpAddr_1_out)
      );
      
-     shifter shifter2(
-     .in1(imem_data_out),
-     .in2(32'b10),
-     .out(shift_2_out)
-     );
-    
     
     
      wire ext16_c;
@@ -233,6 +225,7 @@ module CPU(
      .op(ALUControl),
      .zf(zf),
      .cf(cf),
+     .smt(sa),
      //.negative(n),
      .of(of)
      );
@@ -275,6 +268,8 @@ module CPU(
     
     //CU
     controlUnit CU(
+        .op(RegOp),
+        .fun(func),
         .ALUControl(ALUControl),
         .memToReg(memToReg),
         .regDst(regDst),

@@ -21,10 +21,10 @@
 
 
 module controlUnit(
-        input [31:26] op,
+        input [5:0] op,
         input [5:0] fun,
         output reg[5:0] ALUControl,
-        output reg regDst,
+        output reg regDst,//É¾µô
         output reg ALUsrc,
         output reg memToReg,
         output reg regWrite,
