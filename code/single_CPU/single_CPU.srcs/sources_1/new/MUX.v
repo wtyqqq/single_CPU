@@ -27,7 +27,6 @@ module MMUX(
 	input [31:0] data_in3,
 	output [31:0] dataOut
 );
-
 reg [31:0] result;
 always@(choice,data_in1,data_in2,data_in3)
 	begin
