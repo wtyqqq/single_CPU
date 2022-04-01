@@ -233,13 +233,12 @@ module CPU(
      
      
      assign imem_data_in=32'b0;
-
-     IMEM imem(
-     .clk(clk),
-     .addr(pc_data_out),
-     .outp(imem_data_out)
-     );
      
+     blk_mem_gen_0 imem(
+     .clka(clk),
+     .addra(pc_data_out),
+     .douta(imem_data_out)
+     );
 
      assign rf_rst=rst;
 

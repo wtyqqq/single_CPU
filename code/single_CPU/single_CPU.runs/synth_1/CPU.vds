@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Mar 29 14:49:43 2022
-# Process ID: 17516
+# Start of session at: Fri Apr  1 23:47:48 2022
+# Process ID: 35184
 # Current directory: C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.runs/synth_1
 # Command line: vivado.exe -log CPU.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CPU.tcl
 # Log file: C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.runs/synth_1/CPU.vds
@@ -15,9 +15,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010i'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010i'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7468 
+INFO: Helper process launched with PID 18440 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 342.020 ; gain = 83.418
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 371.496 ; gain = 100.059
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'CPU' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/CPU.v:23]
 INFO: [Synth 8-6157] synthesizing module 'ADDU' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/ADDU.v:22]
@@ -41,115 +41,8 @@ INFO: [Synth 8-6155] done synthesizing module 'PCReg' (9#1) [C:/Users/wty02/Desk
 INFO: [Synth 8-6157] synthesizing module 'ALU' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/myALU.v:23]
 WARNING: [Synth 8-151] case item 6'b101010 is unreachable [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/myALU.v:32]
 INFO: [Synth 8-6155] done synthesizing module 'ALU' (10#1) [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/myALU.v:23]
-INFO: [Synth 8-6157] synthesizing module 'IMEM' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:24]
-CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file './rom.txt'; please make sure the file is added to project and has read permission, ignoring [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:32]
-
-Warning: Trying to implement RAM in registers. Block RAM or DRAM implementation is not possible for one or more of the following reasons :
-	1: Unable to determine number of words or word size in RAM. 
-	2: No valid read/write found for RAM. 
-RAM dissolved into registers
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-WARNING: [Synth 8-3848] Net ROM in module/entity IMEM does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:29]
-INFO: [Common 17-14] Message 'Synth 8-3848' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Synth 8-6155] done synthesizing module 'IMEM' (11#1) [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/IMEM.v:24]
+INFO: [Synth 8-6157] synthesizing module 'blk_mem_gen_0' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.runs/synth_1/.Xil/Vivado-35184-DESKTOP-SO672K3/realtime/blk_mem_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'blk_mem_gen_0' (11#1) [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.runs/synth_1/.Xil/Vivado-35184-DESKTOP-SO672K3/realtime/blk_mem_gen_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'RegFile' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/regFIle.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'RegFile' (12#1) [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/regFIle.v:23]
 INFO: [Synth 8-6157] synthesizing module 'DMEM' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/DMEM.v:22]
@@ -165,9 +58,16 @@ INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/wty0
 INFO: [Synth 8-6155] done synthesizing module 'controlUnit' (14#1) [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/controlUnit.v:23]
 INFO: [Synth 8-6157] synthesizing module 'BranchControl' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/BranchControl.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'BranchControl' (15#1) [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/BranchControl.v:23]
+WARNING: [Synth 8-3848] Net pcdata in module/entity CPU does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/CPU.v:26]
+WARNING: [Synth 8-3848] Net addr in module/entity CPU does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/CPU.v:29]
+WARNING: [Synth 8-3848] Net wdata in module/entity CPU does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/CPU.v:30]
+WARNING: [Synth 8-3848] Net im_r in module/entity CPU does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/CPU.v:31]
+WARNING: [Synth 8-3848] Net dm_cs in module/entity CPU does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/CPU.v:32]
+WARNING: [Synth 8-3848] Net dm_r in module/entity CPU does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/CPU.v:33]
+WARNING: [Synth 8-3848] Net dm_w in module/entity CPU does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/CPU.v:34]
+WARNING: [Synth 8-3848] Net op_out in module/entity CPU does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/CPU.v:35]
+WARNING: [Synth 8-3848] Net Z in module/entity CPU does not have driver. [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/CPU.v:36]
 INFO: [Synth 8-6155] done synthesizing module 'CPU' (16#1) [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/CPU.v:23]
-WARNING: [Synth 8-3331] design controlUnit has unconnected port saveOpt[1]
-WARNING: [Synth 8-3331] design controlUnit has unconnected port saveOpt[0]
 WARNING: [Synth 8-3331] design DMEM has unconnected port addr[31]
 WARNING: [Synth 8-3331] design DMEM has unconnected port addr[30]
 WARNING: [Synth 8-3331] design DMEM has unconnected port addr[29]
@@ -192,30 +92,6 @@ WARNING: [Synth 8-3331] design DMEM has unconnected port addr[11]
 WARNING: [Synth 8-3331] design DMEM has unconnected port addr[10]
 WARNING: [Synth 8-3331] design DMEM has unconnected port addr[9]
 WARNING: [Synth 8-3331] design DMEM has unconnected port addr[8]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[31]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[30]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[29]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[28]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[27]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[26]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[25]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[24]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[23]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[22]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[21]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[20]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[19]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[18]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[17]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[16]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[15]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[14]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[13]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[12]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[11]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[10]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[9]
-WARNING: [Synth 8-3331] design IMEM has unconnected port addr[8]
 WARNING: [Synth 8-3331] design spMUX has unconnected port data_in1[31]
 WARNING: [Synth 8-3331] design spMUX has unconnected port data_in1[30]
 WARNING: [Synth 8-3331] design spMUX has unconnected port data_in1[29]
@@ -266,21 +142,84 @@ WARNING: [Synth 8-3331] design spMUX has unconnected port data_in2[12]
 WARNING: [Synth 8-3331] design spMUX has unconnected port data_in2[11]
 WARNING: [Synth 8-3331] design spMUX has unconnected port data_in2[10]
 WARNING: [Synth 8-3331] design spMUX has unconnected port data_in2[9]
+WARNING: [Synth 8-3331] design spMUX has unconnected port data_in2[8]
+WARNING: [Synth 8-3331] design spMUX has unconnected port data_in2[7]
+WARNING: [Synth 8-3331] design spMUX has unconnected port data_in2[6]
+WARNING: [Synth 8-3331] design spMUX has unconnected port data_in2[5]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[31]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[30]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[29]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[28]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[27]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[26]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[25]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[24]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[23]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[22]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[21]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[20]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[19]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[18]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[17]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[16]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[15]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[14]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[13]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[12]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[11]
+WARNING: [Synth 8-3331] design CPU has unconnected port pcdata[10]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 397.816 ; gain = 139.215
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 427.074 ; gain = 155.637
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 397.816 ; gain = 139.215
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 427.074 ; gain = 155.637
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 427.074 ; gain = 155.637
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010iclg225-1L
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'imem'
+Finished Parsing XDC File [c:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0/blk_mem_gen_0_in_context.xdc] for cell 'imem'
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 758.145 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 758.145 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 758.145 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 758.152 ; gain = 486.715
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010iclg225-1L
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 397.816 ; gain = 139.215
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 758.152 ; gain = 486.715
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7z010iclg225-1L
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for imem. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 758.152 ; gain = 486.715
+---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "zf0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "zf0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "zf0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -327,7 +266,7 @@ INFO: [Synth 8-5546] ROM "array_reg_reg[29]" won't be mapped to RAM because it i
 INFO: [Synth 8-5546] ROM "array_reg_reg[30]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "array_reg_reg[31]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5587] ROM size for "ALUControl" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-5546] ROM "readShamt" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "saveOpt" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-327] inferring latch for variable 'ALUControl_reg' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/controlUnit.v:46]
 WARNING: [Synth 8-327] inferring latch for variable 'regDst_reg' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/controlUnit.v:49]
 WARNING: [Synth 8-327] inferring latch for variable 'ALUsrc_reg' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/controlUnit.v:49]
@@ -340,8 +279,9 @@ WARNING: [Synth 8-327] inferring latch for variable 'jump_reg' [C:/Users/wty02/D
 WARNING: [Synth 8-327] inferring latch for variable 'PCwrite_reg' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/controlUnit.v:49]
 WARNING: [Synth 8-327] inferring latch for variable 'zeroExt_reg' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/controlUnit.v:49]
 WARNING: [Synth 8-327] inferring latch for variable 'readShamt_reg' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/controlUnit.v:49]
+WARNING: [Synth 8-327] inferring latch for variable 'saveOpt_reg' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/controlUnit.v:49]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 431.332 ; gain = 172.730
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 758.152 ; gain = 486.715
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -349,7 +289,6 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -363,7 +302,7 @@ Detailed RTL Component Info :
 +---XORs : 
 	   2 Input     32 Bit         XORs := 1     
 +---Registers : 
-	               32 Bit    Registers := 35    
+	               32 Bit    Registers := 34    
 +---RAMs : 
 	               8K Bit         RAMs := 1     
 +---Muxes : 
@@ -374,7 +313,7 @@ Detailed RTL Component Info :
 	   2 Input      5 Bit        Muxes := 1     
 	  12 Input      4 Bit        Muxes := 1     
 	  12 Input      3 Bit        Muxes := 1     
-	  12 Input      2 Bit        Muxes := 1     
+	  12 Input      2 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 48    
 	  17 Input      1 Bit        Muxes := 2     
 	  12 Input      1 Bit        Muxes := 10    
@@ -428,10 +367,6 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input      1 Bit        Muxes := 15    
 	  17 Input      1 Bit        Muxes := 2     
-Module IMEM 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
 Module RegFile 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -451,7 +386,7 @@ Detailed RTL Component Info :
 	   8 Input      6 Bit        Muxes := 1     
 	  12 Input      4 Bit        Muxes := 1     
 	  12 Input      3 Bit        Muxes := 1     
-	  12 Input      2 Bit        Muxes := 1     
+	  12 Input      2 Bit        Muxes := 2     
 	  12 Input      1 Bit        Muxes := 10    
 	  18 Input      1 Bit        Muxes := 4     
 	   4 Input      1 Bit        Muxes := 1     
@@ -472,7 +407,6 @@ BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
@@ -488,41 +422,58 @@ INFO: [Synth 8-5545] ROM "zf0" won't be mapped to RAM because address size (32) 
 INFO: [Synth 8-5545] ROM "zf0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "zf0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "zf0" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-3332] Sequential element (CU/ALUControl_reg[5]) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/ALUControl_reg[4]) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/ALUControl_reg[3]) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/ALUControl_reg[2]) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/ALUControl_reg[1]) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/ALUControl_reg[0]) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/regDst_reg) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/ALUsrc_reg) is unused and will be removed from module CPU.
 WARNING: [Synth 8-3332] Sequential element (CU/memToReg_reg) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/regWrite_reg) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/memRead_reg) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/memWrite_reg) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/branch_reg[3]) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/branch_reg[2]) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/branch_reg[1]) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/branch_reg[0]) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/jump_reg) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/PCwrite_reg) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/zeroExt_reg) is unused and will be removed from module CPU.
-WARNING: [Synth 8-3332] Sequential element (CU/readShamt_reg) is unused and will be removed from module CPU.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 533.961 ; gain = 275.359
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 758.305 ; gain = 486.867
 ---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|DMEM:       | RAM_reg    | 256 x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance i_0/dmem/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance i_0/dmem/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-No constraint files found.
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 760.457 ; gain = 489.020
+---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 533.961 ; gain = 275.359
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 761.051 ; gain = 489.613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|DMEM:       | RAM_reg    | 256 x 32(READ_FIRST)   | W | R |                        |   |   | Port A           | 1      | 0      | 
++------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -533,8 +484,14 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (CU/branch_reg[3]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CU/branch_reg[2]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CU/branch_reg[1]) is unused and will be removed from module CPU.
+WARNING: [Synth 8-3332] Sequential element (CU/PCwrite_reg) is unused and will be removed from module CPU.
+INFO: [Synth 8-6837] The timing for the instance dmem/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance dmem/RAM_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 533.961 ; gain = 275.359
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 806.543 ; gain = 535.105
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -558,7 +515,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 533.961 ; gain = 275.359
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 806.543 ; gain = 535.105
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -571,7 +528,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 533.961 ; gain = 275.359
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 806.543 ; gain = 535.105
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -583,69 +540,95 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 533.961 ; gain = 275.359
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 806.543 ; gain = 535.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 533.961 ; gain = 275.359
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 806.543 ; gain = 535.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 533.961 ; gain = 275.359
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 806.543 ; gain = 535.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 533.961 ; gain = 275.359
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 806.543 ; gain = 535.105
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |blk_mem_gen_0 |         1|
++------+--------------+----------+
 
 Report Cell Usage: 
-+------+------+------+
-|      |Cell  |Count |
-+------+------+------+
-|1     |OBUFT |   107|
-+------+------+------+
++------+--------------+------+
+|      |Cell          |Count |
++------+--------------+------+
+|1     |blk_mem_gen_0 |     1|
+|2     |BUFG          |     1|
+|3     |CARRY4        |    55|
+|4     |LUT1          |     7|
+|5     |LUT2          |   242|
+|6     |LUT3          |   143|
+|7     |LUT4          |   204|
+|8     |LUT5          |   320|
+|9     |LUT6          |  1115|
+|10    |MUXF7         |   281|
+|11    |MUXF8         |    32|
+|12    |RAMB18E1      |     1|
+|13    |FDCE          |  1022|
+|14    |FDPE          |     1|
+|15    |LD            |    17|
+|16    |IBUF          |     2|
+|17    |OBUFT         |   107|
++------+--------------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |   107|
-+------+---------+-------+------+
++------+----------+------------+------+
+|      |Instance  |Module      |Cells |
++------+----------+------------+------+
+|1     |top       |            |  3582|
+|2     |  ALU     |ALU         |    65|
+|3     |  CU      |controlUnit |  1333|
+|4     |  PC      |PCReg       |    70|
+|5     |  add32_1 |ADDU        |     8|
+|6     |  cpu_ref |RegFile     |  1963|
+|7     |  dmem    |DMEM        |     1|
++------+----------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 533.961 ; gain = 275.359
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 806.543 ; gain = 535.105
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 1 critical warnings and 774 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 533.961 ; gain = 275.359
-Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 533.961 ; gain = 275.359
+Synthesis finished with 0 errors, 0 critical warnings and 189 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:21 . Memory (MB): peak = 806.543 ; gain = 204.027
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 806.543 ; gain = 535.105
 INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 386 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 635.277 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 813.504 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 17 instances were transformed.
+  LD => LDCE: 17 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-101 Infos, 238 Warnings, 1 Critical Warnings and 0 Errors encountered.
+108 Infos, 133 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 635.277 ; gain = 376.676
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 635.277 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 813.504 ; gain = 548.664
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 813.504 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.runs/synth_1/CPU.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CPU_utilization_synth.rpt -pb CPU_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Mar 29 14:49:54 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  1 23:48:19 2022...
