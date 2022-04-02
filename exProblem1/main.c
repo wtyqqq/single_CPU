@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "myhead.h"
 const int MAX=50;
 
 long long result[50];
