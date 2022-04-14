@@ -26,7 +26,7 @@ module BranchControl(
     input Sign_in,
     input Zero_in
     );
-    always@(Input or Sign_in or Zero_in)
+    always@(*)
     begin
         case (Input)
             4'b0000: Output = 1'b0;

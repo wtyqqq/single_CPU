@@ -1,0 +1,7 @@
+Running: xsim.dir/MUX5_test_behav/xsimk.exe -simmode gui -wdb MUX5_test_behav.wdb -simrunnum 0 -socket 12369
+Design successfully loaded
+Design Loading Memory Usage: 6604 KB (Peak: 6604 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 7152 KB (Peak: 7152 KB)
+Simulation CPU Usage: 46 ms

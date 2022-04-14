@@ -38,7 +38,7 @@ module controlUnit(
         output reg [1:0] saveOpt //这个控制讲什么数据存入regFile(一共有三个来源 ALU结果、当前的PC+4、DMEM的输出)
     );
     
-    always @(op or fun)
+    always @(*)
         begin
         case (op ) //R-type
             6'b000000:

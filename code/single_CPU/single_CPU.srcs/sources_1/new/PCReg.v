@@ -25,19 +25,16 @@ module PCReg(
     input rst,
     input ew,
     input [31:0] inputData,
-    output [31:0] outputData,
+    output reg [31:0] outputData,
     output [31:28] data31_28
     );
-    reg [31:0] data;
     always@(posedge clk or posedge rst)begin 
         if(rst)
-        data <=32'h00400000;
+        outputData <=32'h00000000;
         else 
             begin
-                if (ew)
-                    data <= inputData;
+                     outputData <= inputData;
             end
     end
-    assign outputData = data;
-    assign data31_28 = data[31:28];
+    assign data31_28 =  outputData[31:28];
 endmodule

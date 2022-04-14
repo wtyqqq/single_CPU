@@ -22,18 +22,18 @@
 `timescale 1ns / 1ps
 
 module IMEM(
-    input clk,
     input [31:0] addr,
-    output reg [31:0] outp
+    output [31:0] outp
 );
-    reg [31:0] ROM[255:0];
+    reg [31:0] ROM[0:15];
     initial
     begin
-    $readmemb("./rom.txt",ROM);
+    $readmemh("rom.txt",ROM);
     end
-    always @(posedge clk) begin
+/*    always @(*) begin
      outp=ROM[addr];
-     end
-    //assign outp=ROM[addr];
+     end*/
+    assign outp=ROM[addr]; 
+
 endmodule
 

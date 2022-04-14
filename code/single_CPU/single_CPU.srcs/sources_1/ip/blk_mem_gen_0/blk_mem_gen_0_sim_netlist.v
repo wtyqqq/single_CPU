@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Fri Apr  1 23:52:27 2022
+// Date        : Thu Apr 14 09:33:04 2022
 // Host        : DESKTOP-SO672K3 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_sim_netlist.v
@@ -19,10 +19,10 @@ module blk_mem_gen_0
     addra,
     douta);
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME BRAM_PORTA, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *) input clka;
-  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *) input [31:0]addra;
+  (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *) input [7:0]addra;
   (* x_interface_info = "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT" *) output [31:0]douta;
 
-  wire [31:0]addra;
+  wire [7:0]addra;
   wire clka;
   wire [31:0]douta;
   wire NLW_U0_dbiterr_UNCONNECTED;
@@ -38,21 +38,21 @@ module blk_mem_gen_0
   wire NLW_U0_s_axi_wready_UNCONNECTED;
   wire NLW_U0_sbiterr_UNCONNECTED;
   wire [31:0]NLW_U0_doutb_UNCONNECTED;
-  wire [31:0]NLW_U0_rdaddrecc_UNCONNECTED;
+  wire [7:0]NLW_U0_rdaddrecc_UNCONNECTED;
   wire [3:0]NLW_U0_s_axi_bid_UNCONNECTED;
   wire [1:0]NLW_U0_s_axi_bresp_UNCONNECTED;
-  wire [31:0]NLW_U0_s_axi_rdaddrecc_UNCONNECTED;
+  wire [7:0]NLW_U0_s_axi_rdaddrecc_UNCONNECTED;
   wire [31:0]NLW_U0_s_axi_rdata_UNCONNECTED;
   wire [3:0]NLW_U0_s_axi_rid_UNCONNECTED;
   wire [1:0]NLW_U0_s_axi_rresp_UNCONNECTED;
 
-  (* C_ADDRA_WIDTH = "32" *) 
-  (* C_ADDRB_WIDTH = "32" *) 
+  (* C_ADDRA_WIDTH = "8" *) 
+  (* C_ADDRB_WIDTH = "8" *) 
   (* C_ALGORITHM = "1" *) 
   (* C_AXI_ID_WIDTH = "4" *) 
   (* C_AXI_SLAVE_TYPE = "0" *) 
   (* C_AXI_TYPE = "1" *) 
-  (* C_BYTE_SIZE = "8" *) 
+  (* C_BYTE_SIZE = "9" *) 
   (* C_COMMON_CLK = "0" *) 
   (* C_COUNT_18K_BRAM = "1" *) 
   (* C_COUNT_36K_BRAM = "0" *) 
@@ -61,7 +61,7 @@ module blk_mem_gen_0
   (* C_DISABLE_WARN_BHV_COLL = "0" *) 
   (* C_DISABLE_WARN_BHV_RANGE = "0" *) 
   (* C_ELABORATION_DIR = "./" *) 
-  (* C_ENABLE_32BIT_ADDRESS = "1" *) 
+  (* C_ENABLE_32BIT_ADDRESS = "0" *) 
   (* C_EN_DEEPSLEEP_PIN = "0" *) 
   (* C_EN_ECC_PIPE = "0" *) 
   (* C_EN_RDADDRA_CHG = "0" *) 
@@ -108,7 +108,7 @@ module blk_mem_gen_0
   (* C_USE_BRAM_BLOCK = "0" *) 
   (* C_USE_BYTE_WEA = "0" *) 
   (* C_USE_BYTE_WEB = "0" *) 
-  (* C_USE_DEFAULT_DATA = "0" *) 
+  (* C_USE_DEFAULT_DATA = "1" *) 
   (* C_USE_ECC = "0" *) 
   (* C_USE_SOFTECC = "0" *) 
   (* C_USE_URAM = "0" *) 
@@ -124,7 +124,7 @@ module blk_mem_gen_0
   (* downgradeipidentifiedwarnings = "yes" *) 
   blk_mem_gen_0_blk_mem_gen_v8_4_2 U0
        (.addra(addra),
-        .addrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
+        .addrb({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .clka(clka),
         .clkb(1'b0),
         .dbiterr(NLW_U0_dbiterr_UNCONNECTED),
@@ -138,7 +138,7 @@ module blk_mem_gen_0
         .enb(1'b0),
         .injectdbiterr(1'b0),
         .injectsbiterr(1'b0),
-        .rdaddrecc(NLW_U0_rdaddrecc_UNCONNECTED[31:0]),
+        .rdaddrecc(NLW_U0_rdaddrecc_UNCONNECTED[7:0]),
         .regcea(1'b0),
         .regceb(1'b0),
         .rsta(1'b0),
@@ -168,7 +168,7 @@ module blk_mem_gen_0
         .s_axi_dbiterr(NLW_U0_s_axi_dbiterr_UNCONNECTED),
         .s_axi_injectdbiterr(1'b0),
         .s_axi_injectsbiterr(1'b0),
-        .s_axi_rdaddrecc(NLW_U0_s_axi_rdaddrecc_UNCONNECTED[31:0]),
+        .s_axi_rdaddrecc(NLW_U0_s_axi_rdaddrecc_UNCONNECTED[7:0]),
         .s_axi_rdata(NLW_U0_s_axi_rdata_UNCONNECTED[31:0]),
         .s_axi_rid(NLW_U0_s_axi_rid_UNCONNECTED[3:0]),
         .s_axi_rlast(NLW_U0_s_axi_rlast_UNCONNECTED),
@@ -235,15 +235,14 @@ module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init
   input clka;
   input [7:0]addra;
 
-  wire \DEVICE_7SERIES.WITH_BMM_INFO.SP.WIDE_PRIM18.ram_n_32 ;
-  wire \DEVICE_7SERIES.WITH_BMM_INFO.SP.WIDE_PRIM18.ram_n_33 ;
-  wire \DEVICE_7SERIES.WITH_BMM_INFO.SP.WIDE_PRIM18.ram_n_34 ;
-  wire \DEVICE_7SERIES.WITH_BMM_INFO.SP.WIDE_PRIM18.ram_n_35 ;
+  wire \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_32 ;
+  wire \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_33 ;
+  wire \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_34 ;
+  wire \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_35 ;
   wire [7:0]addra;
   wire clka;
   wire [31:0]douta;
 
-  (* bmm_info_memory_device = "[31:0][0:511]" *) 
   (* box_type = "PRIMITIVE" *) 
   RAMB18E1 #(
     .DOA_REG(1),
@@ -256,7 +255,7 @@ module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init
     .INITP_05(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_06(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INITP_07(256'h0000000000000000000000000000000000000000000000000000000000000000),
-    .INIT_00(256'h0000000000000000000000000000000000000000000000000000000000000016),
+    .INIT_00(256'h0000000000000000000000003405AA003404FFFF3403FFEE340200DD340111CC),
     .INIT_01(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_02(256'h0000000000000000000000000000000000000000000000000000000000000000),
     .INIT_03(256'h0000000000000000000000000000000000000000000000000000000000000000),
@@ -332,7 +331,7 @@ module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init
     .IS_RSTREGARSTREG_INVERTED(1'b0),
     .IS_RSTREGB_INVERTED(1'b0),
     .RAM_MODE("TDP"),
-    .RDADDR_COLLISION_HWCONFIG("DELAYED_WRITE"),
+    .RDADDR_COLLISION_HWCONFIG("PERFORMANCE"),
     .READ_WIDTH_A(18),
     .READ_WIDTH_B(18),
     .RSTREG_PRIORITY_A("REGCE"),
@@ -345,7 +344,7 @@ module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init
     .WRITE_MODE_B("WRITE_FIRST"),
     .WRITE_WIDTH_A(18),
     .WRITE_WIDTH_B(18)) 
-    \DEVICE_7SERIES.WITH_BMM_INFO.SP.WIDE_PRIM18.ram 
+    \DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram 
        (.ADDRARDADDR({1'b0,addra,1'b0,1'b0,1'b0,1'b0,1'b0}),
         .ADDRBWRADDR({1'b0,addra,1'b1,1'b0,1'b0,1'b0,1'b0}),
         .CLKARDCLK(clka),
@@ -356,8 +355,8 @@ module blk_mem_gen_0_blk_mem_gen_prim_wrapper_init
         .DIPBDIP({1'b0,1'b0}),
         .DOADO(douta[15:0]),
         .DOBDO(douta[31:16]),
-        .DOPADOP({\DEVICE_7SERIES.WITH_BMM_INFO.SP.WIDE_PRIM18.ram_n_32 ,\DEVICE_7SERIES.WITH_BMM_INFO.SP.WIDE_PRIM18.ram_n_33 }),
-        .DOPBDOP({\DEVICE_7SERIES.WITH_BMM_INFO.SP.WIDE_PRIM18.ram_n_34 ,\DEVICE_7SERIES.WITH_BMM_INFO.SP.WIDE_PRIM18.ram_n_35 }),
+        .DOPADOP({\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_32 ,\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_33 }),
+        .DOPBDOP({\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_34 ,\DEVICE_7SERIES.NO_BMM_INFO.SP.WIDE_PRIM18.ram_n_35 }),
         .ENARDEN(1'b1),
         .ENBWREN(1'b1),
         .REGCEAREGCE(1'b1),
@@ -389,12 +388,12 @@ module blk_mem_gen_0_blk_mem_gen_top
         .douta(douta));
 endmodule
 
-(* C_ADDRA_WIDTH = "32" *) (* C_ADDRB_WIDTH = "32" *) (* C_ALGORITHM = "1" *) 
+(* C_ADDRA_WIDTH = "8" *) (* C_ADDRB_WIDTH = "8" *) (* C_ALGORITHM = "1" *) 
 (* C_AXI_ID_WIDTH = "4" *) (* C_AXI_SLAVE_TYPE = "0" *) (* C_AXI_TYPE = "1" *) 
-(* C_BYTE_SIZE = "8" *) (* C_COMMON_CLK = "0" *) (* C_COUNT_18K_BRAM = "1" *) 
+(* C_BYTE_SIZE = "9" *) (* C_COMMON_CLK = "0" *) (* C_COUNT_18K_BRAM = "1" *) 
 (* C_COUNT_36K_BRAM = "0" *) (* C_CTRL_ECC_ALGO = "NONE" *) (* C_DEFAULT_DATA = "0" *) 
 (* C_DISABLE_WARN_BHV_COLL = "0" *) (* C_DISABLE_WARN_BHV_RANGE = "0" *) (* C_ELABORATION_DIR = "./" *) 
-(* C_ENABLE_32BIT_ADDRESS = "1" *) (* C_EN_DEEPSLEEP_PIN = "0" *) (* C_EN_ECC_PIPE = "0" *) 
+(* C_ENABLE_32BIT_ADDRESS = "0" *) (* C_EN_DEEPSLEEP_PIN = "0" *) (* C_EN_ECC_PIPE = "0" *) 
 (* C_EN_RDADDRA_CHG = "0" *) (* C_EN_RDADDRB_CHG = "0" *) (* C_EN_SAFETY_CKT = "0" *) 
 (* C_EN_SHUTDOWN_PIN = "0" *) (* C_EN_SLEEP_PIN = "0" *) (* C_EST_POWER_SUMMARY = "Estimated Power for IP     :     3.206439 mW" *) 
 (* C_FAMILY = "zynq" *) (* C_HAS_AXI_ID = "0" *) (* C_HAS_ENA = "0" *) 
@@ -409,7 +408,7 @@ endmodule
 (* C_READ_LATENCY_B = "1" *) (* C_READ_WIDTH_A = "32" *) (* C_READ_WIDTH_B = "32" *) 
 (* C_RSTRAM_A = "0" *) (* C_RSTRAM_B = "0" *) (* C_RST_PRIORITY_A = "CE" *) 
 (* C_RST_PRIORITY_B = "CE" *) (* C_SIM_COLLISION_CHECK = "ALL" *) (* C_USE_BRAM_BLOCK = "0" *) 
-(* C_USE_BYTE_WEA = "0" *) (* C_USE_BYTE_WEB = "0" *) (* C_USE_DEFAULT_DATA = "0" *) 
+(* C_USE_BYTE_WEA = "0" *) (* C_USE_BYTE_WEB = "0" *) (* C_USE_DEFAULT_DATA = "1" *) 
 (* C_USE_ECC = "0" *) (* C_USE_SOFTECC = "0" *) (* C_USE_URAM = "0" *) 
 (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) (* C_WRITE_DEPTH_A = "256" *) 
 (* C_WRITE_DEPTH_B = "256" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) (* C_WRITE_MODE_B = "WRITE_FIRST" *) 
@@ -484,7 +483,7 @@ module blk_mem_gen_0_blk_mem_gen_v8_4_2
   input ena;
   input regcea;
   input [0:0]wea;
-  input [31:0]addra;
+  input [7:0]addra;
   input [31:0]dina;
   output [31:0]douta;
   input clkb;
@@ -492,7 +491,7 @@ module blk_mem_gen_0_blk_mem_gen_v8_4_2
   input enb;
   input regceb;
   input [0:0]web;
-  input [31:0]addrb;
+  input [7:0]addrb;
   input [31:0]dinb;
   output [31:0]doutb;
   input injectsbiterr;
@@ -500,7 +499,7 @@ module blk_mem_gen_0_blk_mem_gen_v8_4_2
   input eccpipece;
   output sbiterr;
   output dbiterr;
-  output [31:0]rdaddrecc;
+  output [7:0]rdaddrecc;
   input sleep;
   input deepsleep;
   input shutdown;
@@ -541,10 +540,10 @@ module blk_mem_gen_0_blk_mem_gen_v8_4_2
   input s_axi_injectdbiterr;
   output s_axi_sbiterr;
   output s_axi_dbiterr;
-  output [31:0]s_axi_rdaddrecc;
+  output [7:0]s_axi_rdaddrecc;
 
   wire \<const0> ;
-  wire [31:0]addra;
+  wire [7:0]addra;
   wire clka;
   wire [31:0]douta;
 
@@ -581,30 +580,6 @@ module blk_mem_gen_0_blk_mem_gen_v8_4_2
   assign doutb[2] = \<const0> ;
   assign doutb[1] = \<const0> ;
   assign doutb[0] = \<const0> ;
-  assign rdaddrecc[31] = \<const0> ;
-  assign rdaddrecc[30] = \<const0> ;
-  assign rdaddrecc[29] = \<const0> ;
-  assign rdaddrecc[28] = \<const0> ;
-  assign rdaddrecc[27] = \<const0> ;
-  assign rdaddrecc[26] = \<const0> ;
-  assign rdaddrecc[25] = \<const0> ;
-  assign rdaddrecc[24] = \<const0> ;
-  assign rdaddrecc[23] = \<const0> ;
-  assign rdaddrecc[22] = \<const0> ;
-  assign rdaddrecc[21] = \<const0> ;
-  assign rdaddrecc[20] = \<const0> ;
-  assign rdaddrecc[19] = \<const0> ;
-  assign rdaddrecc[18] = \<const0> ;
-  assign rdaddrecc[17] = \<const0> ;
-  assign rdaddrecc[16] = \<const0> ;
-  assign rdaddrecc[15] = \<const0> ;
-  assign rdaddrecc[14] = \<const0> ;
-  assign rdaddrecc[13] = \<const0> ;
-  assign rdaddrecc[12] = \<const0> ;
-  assign rdaddrecc[11] = \<const0> ;
-  assign rdaddrecc[10] = \<const0> ;
-  assign rdaddrecc[9] = \<const0> ;
-  assign rdaddrecc[8] = \<const0> ;
   assign rdaddrecc[7] = \<const0> ;
   assign rdaddrecc[6] = \<const0> ;
   assign rdaddrecc[5] = \<const0> ;
@@ -625,30 +600,6 @@ module blk_mem_gen_0_blk_mem_gen_v8_4_2
   assign s_axi_bresp[0] = \<const0> ;
   assign s_axi_bvalid = \<const0> ;
   assign s_axi_dbiterr = \<const0> ;
-  assign s_axi_rdaddrecc[31] = \<const0> ;
-  assign s_axi_rdaddrecc[30] = \<const0> ;
-  assign s_axi_rdaddrecc[29] = \<const0> ;
-  assign s_axi_rdaddrecc[28] = \<const0> ;
-  assign s_axi_rdaddrecc[27] = \<const0> ;
-  assign s_axi_rdaddrecc[26] = \<const0> ;
-  assign s_axi_rdaddrecc[25] = \<const0> ;
-  assign s_axi_rdaddrecc[24] = \<const0> ;
-  assign s_axi_rdaddrecc[23] = \<const0> ;
-  assign s_axi_rdaddrecc[22] = \<const0> ;
-  assign s_axi_rdaddrecc[21] = \<const0> ;
-  assign s_axi_rdaddrecc[20] = \<const0> ;
-  assign s_axi_rdaddrecc[19] = \<const0> ;
-  assign s_axi_rdaddrecc[18] = \<const0> ;
-  assign s_axi_rdaddrecc[17] = \<const0> ;
-  assign s_axi_rdaddrecc[16] = \<const0> ;
-  assign s_axi_rdaddrecc[15] = \<const0> ;
-  assign s_axi_rdaddrecc[14] = \<const0> ;
-  assign s_axi_rdaddrecc[13] = \<const0> ;
-  assign s_axi_rdaddrecc[12] = \<const0> ;
-  assign s_axi_rdaddrecc[11] = \<const0> ;
-  assign s_axi_rdaddrecc[10] = \<const0> ;
-  assign s_axi_rdaddrecc[9] = \<const0> ;
-  assign s_axi_rdaddrecc[8] = \<const0> ;
   assign s_axi_rdaddrecc[7] = \<const0> ;
   assign s_axi_rdaddrecc[6] = \<const0> ;
   assign s_axi_rdaddrecc[5] = \<const0> ;
@@ -703,7 +654,7 @@ module blk_mem_gen_0_blk_mem_gen_v8_4_2
   GND GND
        (.G(\<const0> ));
   blk_mem_gen_0_blk_mem_gen_v8_4_2_synth inst_blk_mem_gen
-       (.addra(addra[9:2]),
+       (.addra(addra),
         .clka(clka),
         .douta(douta));
 endmodule
@@ -721,7 +672,7 @@ module blk_mem_gen_0_blk_mem_gen_v8_4_2_synth
   wire clka;
   wire [31:0]douta;
 
-  blk_mem_gen_0_blk_mem_gen_top \gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen 
+  blk_mem_gen_0_blk_mem_gen_top \gnbram.gnativebmg.native_blk_mem_gen 
        (.addra(addra),
         .clka(clka),
         .douta(douta));

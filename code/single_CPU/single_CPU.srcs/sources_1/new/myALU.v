@@ -20,15 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ALU(
-    in1,in2,smt,op,out,cf,of,zf
+module ALU(    
+    input [31:0] in1,in2,
+    input [10:6] smt,
+    input [5:0] op,
+    output reg [31:0] out,
+    output reg cf,of,zf
     );
-    input [31:0] in1,in2;
-    input [10:6] smt;
-    input [5:0] op;
-    output reg [31:0] out;
-    output reg cf,of,zf;
-    always@(in1 or in2 or smt or op)begin
+
+    always@(*)begin
         case(op)
         // add 
          6'b100000:

@@ -22,13 +22,12 @@
 module DMEM(
     input RE,
     input WE,
-    input clk,
     input [31:0] addr,
     output reg [31:0] outp,
     input [31:0] inpt);
-    reg [31:0] RAM[255:0];
+    reg [31:0] RAM[0:255];
 
-    always @(posedge clk) begin
+    always @(*) begin
         if(WE) 
             RAM[addr]<=inpt;
         outp=RE?RAM[addr]:32'b0;

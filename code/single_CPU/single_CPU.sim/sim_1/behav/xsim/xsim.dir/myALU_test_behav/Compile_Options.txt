@@ -1,1 +1,1 @@
--wto "265aacfb85714789b4741ec66f34763d" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "myALU_test_behav" "xil_defaultlib.myALU_test" "xil_defaultlib.glbl" -log "elaborate.log" 
+-wto "265aacfb85714789b4741ec66f34763d" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "myALU_test_behav" "xil_defaultlib.myALU_test" "xil_defaultlib.glbl" -log "elaborate.log" 

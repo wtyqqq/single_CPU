@@ -62,7 +62,7 @@ module blk_mem_gen_0 (
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK" *)
 input wire clka;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *)
-input wire [31 : 0] addra;
+input wire [7 : 0] addra;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME BRAM_PORTA, MEM_SIZE 8192, MEM_WIDTH 32, MEM_ECC NONE, MASTER_TYPE OTHER, READ_LATENCY 1" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA DOUT" *)
 output wire [31 : 0] douta;
@@ -75,12 +75,12 @@ output wire [31 : 0] douta;
     .C_AXI_TYPE(1),
     .C_AXI_SLAVE_TYPE(0),
     .C_USE_BRAM_BLOCK(0),
-    .C_ENABLE_32BIT_ADDRESS(1),
+    .C_ENABLE_32BIT_ADDRESS(0),
     .C_CTRL_ECC_ALGO("NONE"),
     .C_HAS_AXI_ID(0),
     .C_AXI_ID_WIDTH(4),
     .C_MEM_TYPE(3),
-    .C_BYTE_SIZE(8),
+    .C_BYTE_SIZE(9),
     .C_ALGORITHM(1),
     .C_PRIM_TYPE(1),
     .C_LOAD_INIT_FILE(1),
@@ -101,7 +101,7 @@ output wire [31 : 0] douta;
     .C_READ_WIDTH_A(32),
     .C_WRITE_DEPTH_A(256),
     .C_READ_DEPTH_A(256),
-    .C_ADDRA_WIDTH(32),
+    .C_ADDRA_WIDTH(8),
     .C_HAS_RSTB(0),
     .C_RST_PRIORITY_B("CE"),
     .C_RSTRAM_B(0),
@@ -115,7 +115,7 @@ output wire [31 : 0] douta;
     .C_READ_WIDTH_B(32),
     .C_WRITE_DEPTH_B(256),
     .C_READ_DEPTH_B(256),
-    .C_ADDRB_WIDTH(32),
+    .C_ADDRB_WIDTH(8),
     .C_HAS_MEM_OUTPUT_REGS_A(1),
     .C_HAS_MEM_OUTPUT_REGS_B(0),
     .C_HAS_MUX_OUTPUT_REGS_A(0),
@@ -157,7 +157,7 @@ output wire [31 : 0] douta;
     .enb(1'D0),
     .regceb(1'D0),
     .web(1'B0),
-    .addrb(32'B0),
+    .addrb(8'B0),
     .dinb(32'B0),
     .doutb(),
     .injectsbiterr(1'D0),

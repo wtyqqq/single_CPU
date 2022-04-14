@@ -23,19 +23,13 @@
 module CPU(
     input clk,				//时钟沿信号
     input rst,				//复位信号
-    output [31:0] pcdata,	//指令码地址pc
-    input [31:0] inst,		//输入的指令码
-    input [31:0] rdata,		//从ram读入的数据
-    output [31:0] addr,		//写入ram的地址
-    output [31:0] wdata,	//写入ram的数据
-    output im_r,			//指令寄存器读信号
-    output dm_cs,			//
-    output dm_r,			//数据寄存器读信号
-    output dm_w,			//数据寄存器写信号
-    output [5:0] op_out,	//调试输出用...
-    output Z            	//调试输出用...
+    output reg [31:0] test,
+        output reg [31:0] test4,
+    output reg test2,
+    output reg test3
     );
-     
+     //
+
      
      
      
@@ -122,7 +116,7 @@ module CPU(
      
      ADDU NPC(				//NPC模块 处理的是PC+4
      .in1(pc_data_out),			//功能：每次将pc+4，指向下一条指令地址
-     .in2(32'd4),
+     .in2(32'd1),
      .out(npc_out)// 这里是PC+4的地址
      );
      
@@ -214,6 +208,7 @@ module CPU(
      .rst(pc_rst),
      .ew(PCwrite),
      .inputData(pc_data_in),
+     //.inputData(npc_out),
      .outputData(pc_data_out),
      .data31_28(pc_data31_28)
      );
@@ -230,11 +225,12 @@ module CPU(
      //.negative(n),
      .of(of)
      );
-     
-     
-     assign imem_data_in=32'b0;
-     
-     blk_mem_gen_0 imem(
+  
+/*IMEM IMEM(
+.outp(imem_data_out),
+.addr(pc_data_out)
+);*/
+blk_mem_gen_0 imem(
      .clka(clk),
      .addra(pc_data_out),
      .douta(imem_data_out)
@@ -256,7 +252,6 @@ module CPU(
      
      //DMEM
      DMEM dmem(
-     .clk(clk),
      .WE(memWrite),
      .RE(memRead),
      .addr(alu_out),
@@ -291,4 +286,13 @@ module CPU(
      .Sign_in(alu_out[0]),
      .Zero_in(zf)
      );
+     
+always@(*)
+     begin
+        test <= pc_data_out;
+        test2<=PCwrite;
+        test3<=BranchControlOut;
+        test4 <= npc_out;
+        
+     end 
 endmodule
