@@ -21,10 +21,9 @@
 
 
 module JumpADDer(
-    input clk,
     input [25:0] inst_add,
     input [3:0] PCPlus4,
     output [31:0] out
     );
-       assign  out = {PCPlus4,inst_add,2'b00};
+       assign  out = {PCPlus4,2'b00,inst_add};
 endmodule

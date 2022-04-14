@@ -24,7 +24,7 @@ module CPU(
     input clk,				//时钟沿信号
     input rst,				//复位信号
     output reg [31:0] test,
-        output reg [31:0] test4,
+    output reg [31:0] test4,
     output reg test2,
     output reg test3
     );
@@ -114,8 +114,8 @@ module CPU(
      //ext5
      wire [31:0] ext02_out;
      
-     ADDU NPC(				//NPC模块 处理的是PC+4
-     .in1(pc_data_out),			//功能：每次将pc+4，指向下一条指令地址
+     ADDU NPC(				//NPC模块 处理的是PC+1
+     .in1(pc_data_out),			//功能：每次将pc+1，指向下一条指令地址
      .in2(32'd1),
      .out(npc_out)// 这里是PC+4的地址
      );
@@ -236,13 +236,11 @@ blk_mem_gen_0 imem(
      .douta(imem_data_out)
      );
 
-     assign rf_rst=rst;
 
      RegFile cpu_ref(		//通用寄存器模块
-     .clk(rf_clk),
-     .rst(rf_rst),
      .we(regWrite),
      .raddr1(Rsc),
+     .clk(clk),
      .rdata1(readData1),
      .raddr2(Rtc),
      .rdata2(readData2),
@@ -252,6 +250,7 @@ blk_mem_gen_0 imem(
      
      //DMEM
      DMEM dmem(
+     .clk(clk),
      .WE(memWrite),
      .RE(memRead),
      .addr(alu_out),

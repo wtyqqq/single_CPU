@@ -29,8 +29,9 @@ module CPU_test();
    initial
    begin
    clk =1'b0;
-rst =1;
-#10 rst=0;
+    rst =1;
+    #10 rst=0;
+    
    end
 always #10 clk = ~clk;
 CPU CPU(

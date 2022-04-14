@@ -1,0 +1,129 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Apr 14 17:51:30 2022
+# Process ID: 24132
+# Current directory: C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent31088 C:\Users\wty02\Desktop\CPU\single_CPU\code\single_CPU\single_CPU.xpr
+# Log file: C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/vivado.log
+# Journal file: C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.xpr
+update_compile_order -fileset sources_1
+generate_target Simulation [get_files C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci]
+export_ip_user_files -of_objects [get_files C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci] -directory C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.ip_user_files -ipstatic_source_dir C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.cache/compile_simlib/modelsim} {questa=C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.cache/compile_simlib/questa} {riviera=C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.cache/compile_simlib/riviera} {activehdl=C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/CPU_test_behav.wcfg
+source CPU_test.tcl
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/cpu_ref/array_reg[8]}} 
+reset_run blk_mem_gen_0_synth_1
+launch_runs blk_mem_gen_0_synth_1
+wait_on_run blk_mem_gen_0_synth_1
+synth_design -rtl -name rtl_1
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/CU/regDst}} 
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/CPU_test_behav.wcfg
+source CPU_test.tcl
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/CU}} 
+relaunch_sim
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_simulation
+open_wave_config C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/CPU_test_behav.wcfg
+source CPU_test.tcl
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/rf_clk}} 
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/rf_rst}} 
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/rf_rdc}} 
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/Rtc}} 
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/Rsc}} 
+relaunch_sim
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/cpu_ref/array_reg[8]}} 
+close_sim
+launch_simulation
+open_wave_config C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/CPU_test_behav.wcfg
+source CPU_test.tcl
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/cpu_ref/array_reg[8]}} 
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/cpu_ref/clk}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/Ext01}} 
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/CPU_test_behav.wcfg
+source CPU_test.tcl
+close_sim
+launch_simulation
+open_wave_config C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/CPU_test_behav.wcfg
+source CPU_test.tcl
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/dmem/RAM[10]}} 
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/dmem/RAM[0]}} 
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/CPU_test_behav.wcfg
+source CPU_test.tcl
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/dmem/addr}} 
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/dmem/outp}} 
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/dmem/inpt}} 
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/dmem/RAM[0]}} 
+relaunch_sim
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/Ext01}} 
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/CPU_test_behav.wcfg
+source CPU_test.tcl
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/dmem}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/PC/outputData}} 
+relaunch_sim
+close_sim
+launch_simulation
+open_wave_config C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/CPU_test_behav.wcfg
+source CPU_test.tcl
+save_wave_config {C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/CPU_test_behav.wcfg}
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/PC/outputData}} 
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/PC/inputData}} 
+current_wave_config {CPU_test_behav.wcfg}
+add_wave {{/CPU_test/CPU/PC/ew}} 
+save_wave_config {C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/CPU_test_behav.wcfg}
+save_wave_config {C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/CPU_test_behav.wcfg}
+save_wave_config {C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/CPU_test_behav.wcfg}
+relaunch_sim
+close_sim

@@ -20,16 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module DMEM(
-    input RE,
+    input RE,clk,
     input WE,
     input [31:0] addr,
-    output reg [31:0] outp,
+    output  [31:0] outp,
     input [31:0] inpt);
     reg [31:0] RAM[0:255];
 
-    always @(*) begin
+    always@(negedge clk) begin
         if(WE) 
-            RAM[addr]<=inpt;
-        outp=RE?RAM[addr]:32'b0;
+            RAM[addr]=inpt;
     end
+     assign outp=RE?RAM[addr]:32'b0;
 endmodule

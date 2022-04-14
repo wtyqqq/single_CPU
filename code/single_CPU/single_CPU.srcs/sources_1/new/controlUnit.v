@@ -78,7 +78,7 @@ module controlUnit(
         6'b001111:{regDst,ALUsrc,memToReg,regWrite,memRead,memWrite,branch,jump,PCwrite,zeroExt,readShamt,ALUControl,saveOpt}=26'b0_1_0_1_0_0_0000_0_1_1_0_101010_00;//lui这里没有办法调用现成的了。。所以在ALU定义了一个func
         6'b100011:{regDst,ALUsrc,memToReg,regWrite,memRead,memWrite,branch,jump,PCwrite,zeroExt,readShamt,ALUControl,saveOpt}=26'b0_1_1_1_1_0_0000_0_1_1_0_100001_10;//lw
         6'b000100:{regDst,ALUsrc,memToReg,regWrite,memRead,memWrite,branch,jump,PCwrite,zeroExt,readShamt,ALUControl,saveOpt}=26'b0_1_1_1_0_1_0000_0_1_1_0_100001_00;//sw
-        6'b101011:{regDst,ALUsrc,memToReg,regWrite,memRead,memWrite,branch,jump,PCwrite,zeroExt,readShamt,ALUControl,saveOpt}=26'b0_0_0_0_0_0_0001_0_1_0_0_100010_00;//beq 
+        6'b101011:{regDst,ALUsrc,memToReg,regWrite,memRead,memWrite,branch,jump,PCwrite,zeroExt,readShamt,ALUControl,saveOpt}=26'b0_1_0_0_0_1_0001_0_1_0_0_100000_00;//beq 
         6'b101011:{regDst,ALUsrc,memToReg,regWrite,memRead,memWrite,branch,jump,PCwrite,zeroExt,readShamt,ALUControl,saveOpt}=26'b0_0_0_0_0_0_0010_0_1_0_0_100010_00;//bne
         6'b101011:{regDst,ALUsrc,memToReg,regWrite,memRead,memWrite,branch,jump,PCwrite,zeroExt,readShamt,ALUControl,saveOpt}=26'b0_0_0_0_0_0_0011_0_1_0_0_100010_00;//bgtz
         6'b001110:{regDst,ALUsrc,memToReg,regWrite,memRead,memWrite,branch,jump,PCwrite,zeroExt,readShamt,ALUControl,saveOpt}=26'b0_1_0_1_0_0_0000_0_1_1_0_101010_00;//slti
