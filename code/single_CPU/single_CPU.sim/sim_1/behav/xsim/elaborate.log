@@ -7,4 +7,30 @@ WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 32 fo
 WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 32 for port 'data_in2' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/CPU.v:161]
 WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 8 for port 'addra' [C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/CPU.v:235]
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ADDU
+Compiling module xil_defaultlib.MUX
+Compiling module xil_defaultlib.MMUX
+Compiling module xil_defaultlib.spMUX
+Compiling module xil_defaultlib.JumpADDer
+Compiling module xil_defaultlib.Ext16
+Compiling module xil_defaultlib.Ext5
+Compiling module xil_defaultlib.shifter
+Compiling module xil_defaultlib.PCReg
+Compiling module xil_defaultlib.ALU
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_output_stage(...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_2.blk_mem_gen_v8_4_2(C_FAMILY="zyn...
+Compiling module xil_defaultlib.blk_mem_gen_0
+Compiling module xil_defaultlib.RegFile
+Compiling module xil_defaultlib.DMEM
+Compiling module xil_defaultlib.controlUnit
+Compiling module xil_defaultlib.BranchControl
+Compiling module xil_defaultlib.CPU
+Compiling module xil_defaultlib.CPU_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot CPU_test_behav

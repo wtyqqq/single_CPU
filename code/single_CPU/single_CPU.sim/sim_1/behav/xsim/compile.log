@@ -1,0 +1,31 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/ip/blk_mem_gen_0/sim/blk_mem_gen_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blk_mem_gen_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/ADDU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ADDU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/BranchControl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module BranchControl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/CPU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/DMEM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DMEM
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/Ext.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ext5
+INFO: [VRFC 10-311] analyzing module Ext16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/JumpADDer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module JumpADDer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/MUX.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module MUX
+INFO: [VRFC 10-311] analyzing module spMUX
+INFO: [VRFC 10-311] analyzing module MMUX
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/PCReg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCReg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/controlUnit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module controlUnit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/myALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/regFIle.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFile
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sources_1/new/shifter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module shifter
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/wty02/Desktop/CPU/single_CPU/code/single_CPU/single_CPU.srcs/sim_1/new/cpu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CPU_test
